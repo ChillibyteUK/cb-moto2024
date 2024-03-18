@@ -124,7 +124,8 @@ if ($q->have_posts()) {
         $ph = get_the_post_thumbnail_url(get_the_ID(), 'large') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
         $cat = get_the_category();
         ?>
-                <div class="grid__card">
+                <a class="grid__card"
+                    href="<?=get_the_permalink()?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
                         <div
@@ -154,7 +155,7 @@ if ($q->have_posts()) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <?php
                 $c++;
@@ -212,7 +213,8 @@ if ($q->have_posts()) {
         $ph = get_the_post_thumbnail_url(get_the_ID(), 'large') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
         $cat = get_the_category();
         ?>
-                <div class="grid__card">
+                <a class="grid__card"
+                    href="<?=get_the_permalink()?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
                         <div
@@ -243,7 +245,7 @@ if ($q->have_posts()) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <?php
                 $c++;
@@ -300,7 +302,8 @@ if ($q->have_posts()) {
         $ph = get_the_post_thumbnail_url(get_the_ID(), 'large') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
         $cat = get_the_category();
         ?>
-                <div class="grid__card">
+                <a class="grid__card"
+                    href="<?=get_the_permalink()?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
                         <div
@@ -322,7 +325,7 @@ if ($q->have_posts()) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <?php
     }
@@ -378,7 +381,8 @@ if ($q->have_posts()) {
         $ph = get_the_post_thumbnail_url(get_the_ID(), 'large') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
         $cat = get_the_category();
         ?>
-                <div class="grid__card">
+                <a class="grid__card"
+                    href="<?=get_the_permalink()?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
                         <div
@@ -400,7 +404,7 @@ if ($q->have_posts()) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <?php
     }

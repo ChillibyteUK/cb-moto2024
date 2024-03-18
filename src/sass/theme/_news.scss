@@ -1,0 +1,414 @@
+.index_hero {
+    height: var(--full-hero-height);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: var(--fs-900);
+    &--short {
+        max-height: 200px;
+    }
+}
+
+section .section_title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    margin-bottom: 2rem;
+    h2 {
+        margin-bottom: 0;
+        flex-grow: 1;
+    }
+    a {
+        color: var(--_color);
+        position: relative;
+        &::after {
+            content: " \f061";
+            font-family: "font awesome 6 free";
+            font-weight: 900;
+        }
+    }
+    border-bottom: 2px solid var(--_color);
+
+}
+
+
+.index_filters {
+    background-color: var(--col-blue-200);
+    color: var(--blue-900);
+    text-transform: uppercase;
+    padding-block: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+            font-weight: var(--fw-400) !important;
+            color: var(--col-blue-900);
+        }
+    }
+    
+    .category-item {
+        position: relative;
+        padding-right: 2rem;
+        font-size: var(--fs-400);
+    }
+    
+    .category-item:not(:last-child)::after {
+        content: '/';
+        position: absolute;
+        right: 0.5rem;
+        color: var(--col-blue-900);
+    }
+}
+
+.latest {
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap);
+        @media (min-width:992px) {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        .card__inner {
+            grid-template-rows: 40px 1fr auto !important;
+        }
+
+        .card__category {
+            width: max-content !important;
+            min-width: 60px !important;
+        }
+    }
+}
+
+.archive {
+    .latest {
+        .grid__card:nth-of-type(1) {
+            grid-column: span 3;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .technology {
+        .grid__card:nth-of-type(1) {
+            background-color: var(--_color);
+        }
+    }
+}
+
+.grid__card {
+    width: 100%;
+    box-shadow: var(--shadow-out);
+    color: black;
+    text-decoration: none;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    &:hover {
+        color: black;
+        .card__meta_link {
+            padding-right: 0;
+        }
+    }
+
+    .card__image {
+        aspect-ratio: 16 / 9;
+        background-color: var(--col-grey-200);
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+    .card__inner {
+        padding: 1rem;
+        display: grid;
+        grid-template-rows: 20px 1fr auto;
+    }
+
+    .card__category {
+        font-size: var(--fs-300);
+        font-weight: var(--fw-600);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        line-height: 1;
+        display: inline-block;
+        width: 60px;
+    }
+
+    .card__title {
+        font-size: var(--fs-600);
+        min-height: 6rem;
+    }
+
+    .card__excerpt {
+        padding-block: 1rem 2rem;
+        font-size: var(--fs-400);
+    }
+     
+    .card__meta {
+        display: grid;
+        grid-template-areas: "date link" "time link";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        &_date {
+            font-size: var(--fs-300);
+            grid-area: date;
+        }
+        &_time {
+            grid-area: time;
+            font-size: var(--fs-200);
+            color: var(--col-grey-600);
+            font-weight: 500;
+            font-style: italic;
+            &::before {
+                content: "\f017";
+                font-family: "font awesome 6 free";
+                font-style: normal;
+                font-weight: 400;
+            }
+        }
+        &_link {
+            grid-area: link;
+            font-size: 26px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            transition: padding-right 200ms ease-in-out;
+            align-items: center;
+        }
+
+
+    }
+
+    .cat--technology {
+        border-bottom: 2px solid var(--_color);
+    }    
+    .link--technology {
+        color: var(--_color);
+    }
+    .cat--hardware {
+        border-bottom: 2px solid var(--_color);
+    }    
+    .link--hardware {
+        color: var(--_color);
+    }
+    .cat--device-care {
+        border-bottom: 2px solid var(--_color);
+    }    
+    .link--device-care {
+        color: var(--_color);
+    }
+    .cat--security {
+        border-bottom: 2px solid var(--_color);
+    }    
+    .link--security {
+        color: var(--_color);
+    }
+
+}
+
+.grid_4_1 {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: 1fr;
+    grid-template-areas: "pinned" "one" "two" "three" "four";
+    @media (min-width:992px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "pinned pinned" "one two" "three four";
+    }
+    @media (min-width:1200px) {
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-areas: "one two pinned" "three four pinned";
+    }
+    .grid__card:nth-of-type(1) {
+        grid-area: pinned;
+        @media (min-width:1200px) {
+            grid-template-rows: 1fr 1fr;
+            .card__image {
+                aspect-ratio: unset;
+                height: 100%;
+            }
+        }
+    }
+    .grid__card:nth-of-type(2) {
+        grid-area: one;
+    }
+    .grid__card:nth-of-type(3) {
+        grid-area: two;
+    }
+    .grid__card:nth-of-type(4) {
+        grid-area: three;
+    }
+    .grid__card:nth-of-type(5) {
+        grid-area: four;
+    }
+}
+
+.grid_2_3 {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: 1fr;
+    grid-template-areas: "pinned" "one" "two" "three" "four";
+    @media (min-width:992px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "pinned pinned" "one two" "three four";
+    }
+    @media (min-width:1200px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "one pinned pinned" "two three four";
+    }
+    .grid__card:nth-of-type(1) {
+        grid-area: pinned;
+
+
+        .card__image {
+            background-color: var(--col-grey-200);
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            @media (min-width:1200px) {
+                aspect-ratio: 95 / 26;
+            }
+            @media (min-width:1400px) {
+                aspect-ratio: 428 / 117;
+            }
+            display: block;
+        }
+   
+
+    }
+    .grid__card:nth-of-type(2) {
+        grid-area: one;
+    }
+    .grid__card:nth-of-type(3) {
+        grid-area: two;
+    }
+    .grid__card:nth-of-type(4) {
+        grid-area: three;
+    }
+    .grid__card:nth-of-type(5) {
+        grid-area: four;
+    }
+}
+
+.grid_3_2 {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: 1fr;
+    grid-template-areas: "pinned" "one" "two" "three" "four";
+    @media (min-width:992px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "pinned pinned" "one two" "three four";
+    }
+    @media (min-width:1200px) {
+        grid-template-columns: repeat(6,1fr);
+        grid-template-areas: "one one two two three three" "pinned pinned pinned four four four";
+    }
+    .grid__card:nth-of-type(1) {
+        grid-area: pinned;
+    }
+    .grid__card:nth-of-type(2) {
+        grid-area: one;
+    }
+    .grid__card:nth-of-type(3) {
+        grid-area: two;
+    }
+    .grid__card:nth-of-type(4) {
+        grid-area: three;
+    }
+    .grid__card:nth-of-type(5) {
+        grid-area: four;
+    }
+}
+
+
+.technology {
+    --_color: var(--col-blue-200);
+    
+    .grid__card:nth-of-type(1) {
+        background-color: var(--_color);
+        .cat--technology {
+            border-color: white;
+        }
+        .card__meta_date {
+            color: black;
+        }
+        .card__meta_time {
+            color: var(--col-grey-200);
+        }
+        .card__meta_link {
+            color: white;
+        }
+    }
+}
+
+.hardware {
+    --_color: var(--col-red-300);
+    
+    .grid__card:nth-of-type(1) {
+        background-color: var(--_color);
+        .cat--hardware {
+            border-color: white;
+        }
+        .card__meta_date {
+            color: black;
+        }
+        .card__meta_time {
+            color: var(--col-grey-200);
+        }
+        .card__meta_link {
+            color: white;
+        }
+    }
+}
+
+.device-care {
+    --_color: var(--col-purple-300);
+
+    .grid__card:nth-of-type(1) {
+        background-color: var(--_color);
+        .cat--device-care {
+            border-color: white;
+        }
+        .card__meta_date {
+            color: black;
+        }
+        .card__meta_time {
+            color: var(--col-grey-200);
+        }
+        .card__meta_link {
+            color: white;
+        }
+    }
+}
+
+.security {
+    --_color: var(--col-aqua-300);
+    .grid__card:nth-of-type(1) {
+        background-color: var(--_color);
+        .cat--security {
+            border-color: white;
+        }
+        .card__meta_date {
+            color: black;
+        }
+        .card__meta_time {
+            color: var(--col-grey-200);
+        }
+        .card__meta_link {
+            color: white;
+        }
+    }
+}
+
+.all {
+    --_color: black;
+}

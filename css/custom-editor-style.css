@@ -17,14 +17,15 @@
   --col-grey-400: #e6e6e6;
   --col-grey-600: #cccccc;
   --full-hero-height: 400px;
-  --short-hero-height: 300px;
+  --short-hero-height: 200px;
   --fs-200: 14px;
   --fs-300: 16px;
   --fs-400: 18px;
   --fs-500: 100px;
   --fs-600: 26px;
   --fs-700: 40px;
-  --fs-800: 60px;
+  --fs-800: 50px;
+  --fs-900: 60px;
   --fw-400: 400;
   --fw-600: 600;
   --shadow-out: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;

@@ -29,6 +29,8 @@ h1, .h1 {
     font-size: var(--fs-800);
     font-weight: var(--fw-400);
     text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.075rem;
 }
 
 h2, .h2 {

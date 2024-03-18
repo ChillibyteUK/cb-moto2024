@@ -1,0 +1,36 @@
+.blog {
+    font-size: var(--fs-400);
+    line-height: 1.36;
+
+    .post_hero {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .post_meta {
+        .container-xl {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        color: var(--col-grey-600);
+
+        &__left,
+        &__right {
+            display: flex;
+        }
+
+        &__author,
+        &__title {
+            font-weight: var(--fw-600);
+            &::after {
+                content: "|";
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+}
+

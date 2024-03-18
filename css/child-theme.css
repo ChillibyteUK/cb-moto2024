@@ -17,14 +17,15 @@
   --col-grey-400: #e6e6e6;
   --col-grey-600: #cccccc;
   --full-hero-height: 400px;
-  --short-hero-height: 300px;
+  --short-hero-height: 200px;
   --fs-200: 14px;
   --fs-300: 16px;
   --fs-400: 18px;
   --fs-500: 100px;
   --fs-600: 26px;
   --fs-700: 40px;
-  --fs-800: 60px;
+  --fs-800: 50px;
+  --fs-900: 60px;
   --fw-400: 400;
   --fw-600: 600;
   --shadow-out: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -21111,6 +21112,8 @@ h1, .h1 {
   font-size: var(--fs-800);
   font-weight: var(--fw-400);
   text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.075rem;
 }
 
 h2, .h2 {
@@ -21170,7 +21173,7 @@ strong {
   font-size: var(--fs-900);
 }
 .index_hero--short {
-  max-height: 200px;
+  max-height: var(--short-hero-height);
 }
 
 section .section_title {
@@ -21561,6 +21564,80 @@ section .section_title a::after {
 
 .all {
   --_color: black;
+}
+
+.blog {
+  font-size: var(--fs-400);
+  line-height: 1.36;
+}
+.blog .post_hero {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.blog .post_meta {
+  color: var(--col-grey-600);
+}
+.blog .post_meta .container-xl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.blog .post_meta__left, .blog .post_meta__right {
+  display: flex;
+}
+.blog .post_meta__author, .blog .post_meta__title {
+  font-weight: var(--fw-600);
+}
+.blog .post_meta__author::after, .blog .post_meta__title::after {
+  content: "|";
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.text--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+@media (min-width: 1200px) {
+  .text--right {
+    max-width: 570px;
+  }
+}
+@media (min-width: 1400px) {
+  .text--right {
+    max-width: 660px;
+  }
+}
+
+.text--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  height: 100%;
+}
+@media (min-width: 1200px) {
+  .text--left {
+    max-width: 570px;
+  }
+}
+@media (min-width: 1400px) {
+  .text--left {
+    max-width: 660px;
+  }
+}
+
+.text_image .row {
+  min-height: 400px;
+}
+.text_image__image {
+  background-size: cover;
+  background-position: center;
 }
 
 .container-xl .container-xl {

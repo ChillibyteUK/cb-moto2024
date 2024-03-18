@@ -9,7 +9,7 @@
     text-transform: uppercase;
     font-size: var(--fs-900);
     &--short {
-        max-height: 200px;
+        max-height: var(--short-hero-height);
     }
 }
 

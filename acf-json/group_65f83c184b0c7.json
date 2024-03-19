@@ -16,10 +16,10 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "1": "Yes",
-                "0": "No"
-            },
+            "choices": [
+                "No",
+                "Yes"
+            ],
             "default_value": "0 : No",
             "return_format": "value",
             "allow_null": 0,
@@ -46,5 +46,5 @@
     "active": true,
     "description": "Sticky",
     "show_in_rest": 0,
-    "modified": 1710768716
+    "modified": 1710861934
 }

@@ -1,10 +1,10 @@
 {
-    "key": "group_65f8764696f50",
-    "title": "CB Text \/ Full Image",
+    "key": "group_65f99de91c953",
+    "title": "CB Text \/ Image",
     "fields": [
         {
-            "key": "field_65f87646d8c8b",
-            "label": "CB Text \/ Full Image",
+            "key": "field_65f99de92b8a7",
+            "label": "CB Text \/ Image",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -21,7 +21,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_65f95b0897536",
+            "key": "field_65f99de92f40f",
             "label": "Order",
             "name": "order",
             "aria-label": "",
@@ -46,7 +46,7 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_65f9655ae469b",
+            "key": "field_65f99de932ed5",
             "label": "Colour",
             "name": "colour",
             "aria-label": "",
@@ -65,7 +65,7 @@
             "return_format": "slug"
         },
         {
-            "key": "field_65f87673d8c8e",
+            "key": "field_65f99de936a1b",
             "label": "Image",
             "name": "image",
             "aria-label": "",
@@ -90,7 +90,7 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_65f87656d8c8c",
+            "key": "field_65f99de93a4a3",
             "label": "Title",
             "name": "title",
             "aria-label": "",
@@ -110,7 +110,7 @@
             "append": ""
         },
         {
-            "key": "field_65f8766ad8c8d",
+            "key": "field_65f99de93dec9",
             "label": "Content",
             "name": "content",
             "aria-label": "",
@@ -135,7 +135,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/cb-text-image"
+                "value": "acf\/cb-text-image-constrained"
             }
         ]
     ],
@@ -148,5 +148,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710857691
+    "modified": 1710857775
 }

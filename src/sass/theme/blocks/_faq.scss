@@ -1,0 +1,9 @@
+.faq {
+    &__row {
+        margin-bottom: 2rem;
+    }
+    &__question {
+        font-weight: var(--fw-600);
+        margin-bottom: 1rem;
+    }
+}

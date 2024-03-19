@@ -16,8 +16,9 @@ defined('ABSPATH') || exit;
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/Gotham-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/Gotham-Book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/Gotham-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/Gotham-MediumItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <?php
     if (is_front_page()) {
         ?>

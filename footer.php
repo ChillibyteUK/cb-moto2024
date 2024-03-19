@@ -8,7 +8,7 @@ defined('ABSPATH') || exit;
     <div class="footer container-xl pt-5 pb-3">
         <div class="row">
             <div class="col-lg-3 d-flex align-items-start">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/"
+                <img src="<?=get_stylesheet_directory_uri()?>/img/motorola-logo.svg"
                     class="footer__logo" alt="Motorola">
             </div>
             <div class="col-lg-3">

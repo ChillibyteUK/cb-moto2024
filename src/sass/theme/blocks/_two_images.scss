@@ -1,0 +1,13 @@
+.two_images {
+    display: grid;
+    overflow: hidden;
+    @media (min-width:992px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    img {
+        max-height: 400px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

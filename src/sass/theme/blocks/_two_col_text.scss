@@ -1,0 +1,8 @@
+.two_col_text {
+    .container-xl > strong {
+        display: block;
+    }
+    &__content {
+        columns: 2;
+    }
+}

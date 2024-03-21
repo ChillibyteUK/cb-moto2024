@@ -91,7 +91,7 @@ function widgets_init()
             array(
                 'name'  => 'Navy Blue',
                 'slug'  => 'bg-navy-blue',
-                'color' => '#92bfe4',
+                'color' => '#0d1624',
             ),
             array(
                 'name'  => 'Coral',

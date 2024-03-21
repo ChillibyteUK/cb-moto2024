@@ -1,4 +1,84 @@
 footer {
-    background-color: var(--col-blue-900);
-    color: white;
+    color: #001428;
+
+    font-size: var(--fs-300);
+
+    .pre-menu {
+        margin-bottom: 4rem;
+    }
+
+    .footer__logo {
+        margin-top: 6px;
+        display: block;
+        margin-inline: auto;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+    }
+
+    .flag {
+        height: 25px;
+        width: 44px;
+    }
+    .location {
+        a {
+            text-decoration: underline;
+        }
+        @media (min-width:992px) {
+            width: 70%;
+            margin-left: 20%;
+        }
+    }
+
+    .footer__menurow {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        & > div {
+            a {
+                font-size: var(--fs-400);
+            }
+            padding-block: 1rem;
+            border-top: 1px solid var(--col-grey-400);
+        }
+        @media (min-width:768px) {
+            flex-direction: row;
+            & > div {
+                a {
+                    font-size: var(--fs-300);
+                }
+                width: 20%;
+                border: none;
+                padding: 0;
+            }
+        }
+    }
+    a {
+        color: #001428;
+        text-decoration: none;
+        transition: color 200ms ease-in-out;
+        &:hover {
+            color: var(--col-blue-900);
+        }
+    }
+
+    .secure-site {
+        max-width: 30px;
+        max-height: 30px;
+        filter: invert(1);
+        margin-top: 15px;
+        display: block;
+        margin-inline: auto;
+    }
+
+    .colophon {
+        background-color: var(--col-grey-200);
+        @media (min-width:768px) {
+            background-color: white;
+        }
+    }
 }

@@ -65,11 +65,20 @@ do_action('wp_body_open');
 ?>
 <div class="site" id="page">
     <div id="wrapper-navbar" class="fixed-top">
-        <nav id="navbar" class="navbar navbar-expand-md d-block p-0 pt-2 pt-md-0" aria-labelledby="main-nav-label">
-            <div class="container-xl mb-2 d-block d-md-flex">
-                <div class="d-flex w-md-auto justify-content-between align-items-center px-2">
-                    <a href="/" class="navbar-brand" rel="home"></a>
-                    <button class="navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse" data-bs-target=".navbars" type="button" aria-label="Navigation"><i class="fa fa-navicon"></i></button>
+        <nav id="navbar" class="navbar navbar-expand-md d-block py-auto" aria-labelledby="main-nav-label">
+            <div class="container-xl d-block d-md-flex justify-content-start">
+                <div class="d-flex w-md-auto justify-content-start align-items-center px-2">
+                    <button class="navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse" data-bs-target=".navbars" type="button" aria-label="Navigation">
+                        <div class="navbar-toggler__container pointer">
+                            <span class="navbar-toggler__bar1"></span>
+                            <span class="navbar-toggler__bar2"></span>
+                            <span class="navbar-toggler__bar3"></span>
+                        </div>    
+                    </button>
+                    <div class="logo">
+                        <a href="/" class="navbar-brand logo-full" rel="home"><img src="<?=get_stylesheet_directory_uri()?>/img/c-rd-motorola@2x.png" width=118.5 height=24 alt="Motorola logo"></a>
+                        <a href="/" class="navbar-brand logo-icon" rel="home"><img src="<?=get_stylesheet_directory_uri()?>/img/motorola-2.png" width=30 height=30 alt="Motorola logo"></a>
+                    </div>
                 </div>
                 <div class="d-flex flex-column-reverse flex-md-column">
                     <?php

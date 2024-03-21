@@ -8,7 +8,7 @@
 @import "blocks/blocks";
 
 main {
-    // margin-top: var(--h-top);
+    margin-top: var(--h-top);
 }
 
 .container-xl .container-xl {
@@ -43,7 +43,7 @@ a.anchor {
         margin-right: 0.5rem;
     }
 }
-
+/*
 :not(.grid__card,.share-icons,.social-icons,figure,.cb,.rplg-biz-name,#top-nav>li) > a[target="_blank"]:not(.btn,.fa-brands)::after {
     content: "\f08e";
     font-family: "Font Awesome 6 Free";
@@ -51,7 +51,7 @@ a.anchor {
     margin-left: 0.5rem;
     display: inline-block;
 }
-
+*/
 
 #breadcrumbs {
     font-size: 0.889rem;

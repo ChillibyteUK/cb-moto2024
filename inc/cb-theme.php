@@ -85,7 +85,7 @@ function widgets_init()
         array(
             array(
                 'name'  => 'Light Blue',
-                'slug'  => 'bg-blue',
+                'slug'  => 'bg-light-blue',
                 'color' => '#95c1e9',
             ),
             array(

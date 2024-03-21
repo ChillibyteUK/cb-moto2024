@@ -22,13 +22,33 @@
             display: flex;
         }
 
-        &__author,
+        &__back,
         &__title {
             font-weight: var(--fw-600);
+            color: var(--col-grey-600);
+        }
+        &__date {
+            &::before {
+                content: "|";
+                padding-left: 0.5rem;
+            }
+        }
+        &__title {
             &::after {
                 content: "|";
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
+                font-weight: var(--fw-400)
+            }
+        }
+        &__back:hover {
+            color: var(--col-navy-blue);
+        }
+        &__category a {
+            font-weight: var(--fw-400) !important;
+            color: var(--col-grey-600);
+            &:hover {
+                color: var(--col-navy-blue);
             }
         }
     }

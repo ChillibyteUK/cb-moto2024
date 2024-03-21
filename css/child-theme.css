@@ -21741,13 +21741,29 @@ section .section_title a::after {
 .blog .post_meta__left, .blog .post_meta__right {
   display: flex;
 }
-.blog .post_meta__author, .blog .post_meta__title {
+.blog .post_meta__back, .blog .post_meta__title {
   font-weight: var(--fw-600);
+  color: var(--col-grey-600);
 }
-.blog .post_meta__author::after, .blog .post_meta__title::after {
+.blog .post_meta__date::before {
+  content: "|";
+  padding-left: 0.5rem;
+}
+.blog .post_meta__title::after {
   content: "|";
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  font-weight: var(--fw-400);
+}
+.blog .post_meta__back:hover {
+  color: var(--col-navy-blue);
+}
+.blog .post_meta__category a {
+  font-weight: var(--fw-400) !important;
+  color: var(--col-grey-600);
+}
+.blog .post_meta__category a:hover {
+  color: var(--col-navy-blue);
 }
 
 .text--right {

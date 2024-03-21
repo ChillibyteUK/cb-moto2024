@@ -12,7 +12,7 @@ $cat = get_the_category();
     <section class="post_meta">
         <div class="container-xl">
             <div class="post_meta__left">
-                <div class="post_meta__author">Motorola</div>
+                <a class="post_meta__back" href="/">Back</a>
                 <div class="post_meta__date">
                     <?=get_the_date('jS F Y')?>
                 </div>
@@ -20,7 +20,7 @@ $cat = get_the_category();
             <div class="post_meta__right">
                 <div class="post_meta__title">Categories</div>
                 <div class="post_meta__category">
-                    <?=$cat[0]->name?>
+                    <a href="<?=get_category_link($cat[0]->term_id)?>"><?=$cat[0]->name?></a>
                 </div>
             </div>
         </div>

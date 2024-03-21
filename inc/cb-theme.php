@@ -84,59 +84,24 @@ function widgets_init()
         'editor-color-palette',
         array(
             array(
-                'name'  => 'Blue 100',
-                'slug'  => 'blue-100',
-                'color' => '#a7cee9',
+                'name'  => 'Light Blue',
+                'slug'  => 'bg-blue',
+                'color' => '#95c1e9',
             ),
             array(
-                'name'  => 'Blue 200',
-                'slug'  => 'blue-200',
+                'name'  => 'Navy Blue',
+                'slug'  => 'bg-navy-blue',
                 'color' => '#92bfe4',
             ),
             array(
-                'name'  => 'Blue 300',
-                'slug'  => 'blue-300',
-                'color' => '#35748b',
+                'name'  => 'Coral',
+                'slug'  => 'bg-coral',
+                'color' => '#ff554d',
             ),
             array(
-                'name'  => 'Blue 400',
-                'slug'  => 'blue-400',
-                'color' => '#005b7b',
-            ),
-            array(
-                'name'  => 'Blue 900',
-                'slug'  => 'blue-900',
-                'color' => '#081422',
-            ),
-            array(
-                'name'  => 'Red 300',
-                'slug'  => 'red-300',
-                'color' => '#fa6a66',
-            ),
-            array(
-                'name'  => 'Red 400',
-                'slug'  => 'red-400',
-                'color' => '#ff4f4e',
-            ),
-            array(
-                'name'  => 'Aqua 300',
-                'slug'  => 'aqua-300',
-                'color' => '#4b839a',
-            ),
-            array(
-                'name'  => 'Aqua 400',
-                'slug'  => 'aqua-400',
-                'color' => '#005b7b',
-            ),
-            array(
-                'name'  => 'Beige 300',
-                'slug'  => 'beige-300',
-                'color' => '#ece1d8',
-            ),
-            array(
-                'name'  => 'Beige 400',
-                'slug'  => 'beige-400',
-                'color' => '#e7d2c9',
+                'name'  => 'Off White',
+                'slug'  => 'bg-off-white',
+                'color' => '#f8f6f4',
             ),
         )
     );

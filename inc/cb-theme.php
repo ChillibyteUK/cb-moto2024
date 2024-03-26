@@ -103,6 +103,11 @@ function widgets_init()
                 'slug'  => 'bg-off-white',
                 'color' => '#f8f6f4',
             ),
+            array(
+                'name'  => 'Off White 50',
+                'slug'  => 'bg-off-white-50',
+                'color' => '#f8f6f480',
+            ),
         )
     );
 }

@@ -60,6 +60,14 @@ defined('ABSPATH') || exit;
         </div>
     </div>
 </footer>
+<div class="modal fade" id="newsletterModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-5 text-center">
+            FORM CODE HERE
+        </div>
+    </div>
+</div>
+
 <?php wp_footer();
 if (get_field('gtm_property', 'options')) {
     ?>

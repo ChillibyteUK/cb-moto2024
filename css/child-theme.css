@@ -10,6 +10,7 @@
   --col-grey-600: #cccccc;
   --full-hero-height: 400px;
   --short-hero-height: 200px;
+  --fs-100: 12px;
   --fs-200: 14px;
   --fs-300: 16px;
   --fs-400: 15px;
@@ -20,6 +21,7 @@
   --fs-900: 60px;
   --fw-400: 400;
   --fw-600: 600;
+  --lh-300: 1.15;
   --shadow-out: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   --shadow-in: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   --grid-gap: 1.5rem;
@@ -21076,27 +21078,27 @@ readers do not read off random characters that represent icons */
 
 @font-face {
   font-display: swap;
-  font-family: "Gotham";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Gotham-Book.woff2") format("woff2");
+  src: url("../fonts/montserrat-v26-latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Gotham";
+  font-family: "Montserrat";
   font-style: italic;
   font-weight: 500;
-  src: url("../fonts/Gotham-MediumItalic.woff2") format("woff2");
+  src: url("../fonts/montserrat-v26-latin-500italic.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: "Gotham";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Gotham-Bold.woff2") format("woff2");
+  src: url("../fonts/montserrat-v26-latin-700.woff2") format("woff2");
 }
 body {
-  font-family: "Gotham", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: var(--fs-400);
   line-height: 22.5px;
@@ -21128,12 +21130,21 @@ h3, .h3 {
   text-wrap: balance;
 }
 
+.fw-600,
 strong {
   font-weight: var(--fw-600);
 }
 
+.lh-300 {
+  line-height: var(--lh-300);
+}
+
 .w-short {
   max-width: 65ch;
+}
+
+.fs-100 {
+  font-size: var(--fs-100);
 }
 
 .fs-200 {
@@ -21177,6 +21188,10 @@ strong {
   background-color: var(--col-off-white-200);
 }
 
+.text-coral {
+  color: var(--col-coral);
+}
+
 .btn {
   text-decoration: none;
   border-radius: 0.25rem;
@@ -21210,6 +21225,24 @@ strong {
   #wrapper-navbar .scrolled .logo-icon {
     display: block;
   }
+  #wrapper-navbar .scrolled .support-text, #wrapper-navbar .scrolled .newsletter-text {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  #wrapper-navbar .support-text, #wrapper-navbar .newsletter-text {
+    display: none;
+  }
+}
+#wrapper-navbar .mobile-icons div img {
+  width: 22px;
+  height: 16px;
+  align-self: center;
+}
+#wrapper-navbar .mobile-icons a img {
+  width: 22px;
+  height: 22px;
+  align-self: center;
 }
 #wrapper-navbar .navbar-toggler {
   border: none;
@@ -21237,6 +21270,20 @@ strong {
 }
 #wrapper-navbar .navbar-toggler__bar3 {
   width: 16px;
+}
+#wrapper-navbar .header-icons .newsletter-icon {
+  width: 22px;
+  height: 16px;
+  align-self: center;
+}
+#wrapper-navbar .header-icons .support-icon {
+  width: 22px;
+  height: 22px;
+  align-self: center;
+}
+#wrapper-navbar .header-icons a {
+  color: var(--col-navy-blue);
+  text-decoration: none;
 }
 
 footer {
@@ -21748,9 +21795,13 @@ section .section_title a::after {
 .blog .post_meta__left, .blog .post_meta__right {
   display: flex;
 }
-.blog .post_meta__back, .blog .post_meta__title {
+.blog .post_meta__title {
   font-weight: var(--fw-600);
   color: var(--col-grey-600);
+}
+.blog .post_meta__back {
+  font-weight: var(--fw-600);
+  color: var(--col-navy-blue);
 }
 .blog .post_meta__date::before {
   content: "|";

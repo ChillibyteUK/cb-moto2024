@@ -16,9 +16,9 @@ defined('ABSPATH') || exit;
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/Gotham-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/Gotham-Book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/Gotham-MediumItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/montserrat-v26-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/montserrat-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/montserrat-v26-latin-500italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <?php
     if (is_front_page()) {
         ?>
@@ -79,6 +79,14 @@ do_action('wp_body_open');
                         <a href="/" class="navbar-brand logo-full" rel="home"><img src="<?=get_stylesheet_directory_uri()?>/img/c-rd-motorola@2x.png" width=118.5 height=24 alt="Motorola logo"></a>
                         <a href="/" class="navbar-brand logo-icon" rel="home"><img src="<?=get_stylesheet_directory_uri()?>/img/motorola-2.png" width=30 height=30 alt="Motorola logo"></a>
                     </div>
+                    <div class="mobile-icons d-flex gap-3 ms-auto d-md-none">
+                        <div role="button" class="d-flex" data-bs-toggle="modal" data-bs-target="#newsletterModal">
+                            <img class="newsletter-icon" alt="Newsletter envelop" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png">
+                        </div>
+                        <a class="d-flex align-items-center" href="https://motorola-global-en-uk.custhelp.com/" target="_blank">
+                            <img class="support-icon" alt="Support icon" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png">
+                        </a>
+                    </div>
                 </div>
                 <div class="d-flex flex-column-reverse flex-md-column">
                     <?php
@@ -95,6 +103,16 @@ do_action('wp_body_open');
                             )
                         );
                     ?>
+                </div>
+                <div class="d-none d-md-flex ms-auto align-items-center header-icons gap-4 gap-lg-5">
+                    <div role="button" class="d-flex" data-bs-toggle="modal" data-bs-target="#newsletterModal">
+                        <img class="newsletter-icon" alt="Newsletter envelop" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png">
+                        <div class="ps-2 lh-300 fs-100 newsletter-text">Subscribe to<br><span class="fs-400 text-coral fw-600">Get 5% Off</span></div>
+                    </div>
+                    <a class="d-flex align-items-center" href="https://motorola-global-en-uk.custhelp.com/" target="_blank">
+                        <img class="support-icon" alt="Support icon" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png">
+                        <div class="ps-2 lh-300 fs-100 support-text">Support</div></a>
+                    </a>
                 </div>
             </div>
 		

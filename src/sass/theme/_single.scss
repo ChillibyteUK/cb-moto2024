@@ -24,10 +24,13 @@
             display: flex;
         }
 
-        &__back,
         &__title {
             font-weight: var(--fw-600);
             color: var(--col-grey-600);
+        }
+        &__back {
+            font-weight: var(--fw-600);
+            color: var(--col-navy-blue);
         }
         &__date {
             &::before {

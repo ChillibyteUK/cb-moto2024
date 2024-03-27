@@ -11,7 +11,7 @@ get_header();
 <main id="main">
     <section class="index_hero"
         style="background-image: url(<?=$img?>)">
-        <h1>Motoverse Blog</h1>
+        <h1 class="mx-2">Motoverse Blog</h1>
     </section>
     <section class="index_filters">
         <div class="category-list">
@@ -405,7 +405,6 @@ if ($q->have_posts()) {
                         </div>
                     </div>
                 </a>
-
                 <?php
     }
 }

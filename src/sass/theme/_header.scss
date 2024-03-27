@@ -1,10 +1,10 @@
 #wrapper-navbar {
     background-color: #fbf9f7;
     box-shadow: 0 6px 20px rgba(0,0,0,.16);
-    font-size: 0.75rem;
     color: #001428;
-    a {
+    a.nav-link {
         color: #001428;
+        font-size: var(--fs-200);
     }
 
     .navbar {

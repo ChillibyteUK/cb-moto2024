@@ -21919,7 +21919,7 @@ section .section_title a::after {
 }
 .faq__question {
   font-weight: var(--fw-600);
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 main {

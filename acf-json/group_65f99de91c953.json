@@ -127,7 +127,7 @@
             "maxlength": "",
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "br"
         }
     ],
     "location": [
@@ -148,5 +148,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710857775
+    "modified": 1713872655
 }

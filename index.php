@@ -177,8 +177,11 @@ if ($q->have_posts()) {
                             <?php
         if ($c == 1) {
             ?>
-                            <div class="card__excerpt">
+                            <div class="card__excerpt d-md-none">
                                 <?=wp_trim_words(get_the_content(null, false, get_the_ID()), 20)?>
+                            </div>
+                            <div class="card__excerpt d-none d-md-block">
+                                <?=wp_trim_words(get_the_content(null, false, get_the_ID()), 50)?>
                             </div>
                             <?php
         }
@@ -267,8 +270,11 @@ if ($q->have_posts()) {
                             <?php
                         if ($c == 1) {
                             ?>
-                            <div class="card__excerpt">
+                            <div class="card__excerpt d-md-none">
                                 <?=wp_trim_words(get_the_content(null, false, get_the_ID()), 20)?>
+                            </div>
+                            <div class="card__excerpt d-none d-md-block">
+                                <?=wp_trim_words(get_the_content(null, false, get_the_ID()), 50)?>
                             </div>
                             <?php
                         }
@@ -390,7 +396,7 @@ if ($q->have_posts()) {
                 <?php
 $q = new WP_Query(array(
     'post_type'      => 'post',
-    'posts_per_page' => 5,
+    'posts_per_page' => 6,
     'category_name' => 'security',
     'ignore_sticky_posts' => 1,
     'meta_query'     => array(

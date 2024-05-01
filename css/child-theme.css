@@ -21507,9 +21507,10 @@ section .section_title a::after {
 }
 .grid__card .card__title {
   font-size: var(--fs-600);
-  min-height: 6.5rem;
+  min-height: 6rem;
   text-wrap: balance;
   line-height: var(--lh-300);
+  padding-bottom: 1rem;
 }
 .grid__card .card__excerpt {
   padding-block: 1rem 2rem;

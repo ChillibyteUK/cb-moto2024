@@ -44,13 +44,16 @@
             font-size: var(--fs-400);
             font-weight: var(--fw-600);
             min-height: 3rem;
+            text-wrap: balance;
+            margin-bottom: 0.25rem;
         }
         .card__link {
-            font-size: var(--fs-300);
+            font-size: var(--fs-400);
             font-weight: var(--fw-600);
             color: var(--_color);
             i {
                 transition: padding-left 200ms ease-in-out;
+                font-size: 12px;
             }
         }
     }

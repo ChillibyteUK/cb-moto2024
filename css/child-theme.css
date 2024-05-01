@@ -12,8 +12,8 @@
   --short-hero-height: 200px;
   --fs-100: 12px;
   --fs-200: 14px;
-  --fs-300: 16px;
-  --fs-400: 15px;
+  --fs-300: 15px;
+  --fs-400: 16px;
   --fs-500: 18px;
   --fs-550: 22px;
   --fs-600: 26px;
@@ -21953,14 +21953,17 @@ section .section_title a::after {
   font-size: var(--fs-400);
   font-weight: var(--fw-600);
   min-height: 3rem;
+  text-wrap: balance;
+  margin-bottom: 0.25rem;
 }
 .related_grid .card__inner .card__link {
-  font-size: var(--fs-300);
+  font-size: var(--fs-400);
   font-weight: var(--fw-600);
   color: var(--_color);
 }
 .related_grid .card__inner .card__link i {
   transition: padding-left 200ms ease-in-out;
+  font-size: 12px;
 }
 
 .two_images {

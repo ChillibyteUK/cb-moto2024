@@ -83,15 +83,15 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
-        acf_register_block_type(array(
-            'name'				=> 'cb_related_posts',
-            'title'				=> __('CB Related Posts'),
-            'category'			=> 'layout',
-            'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/cb_related_posts.php',
-            'mode'	=> 'edit',
-            'supports' => array('mode' => false),
-        ));
+        // acf_register_block_type(array(
+        //     'name'				=> 'cb_related_posts',
+        //     'title'				=> __('CB Related Posts'),
+        //     'category'			=> 'layout',
+        //     'icon'				=> 'cover-image',
+        //     'render_template'	=> 'page-templates/blocks/cb_related_posts.php',
+        //     'mode'	=> 'edit',
+        //     'supports' => array('mode' => false),
+        // ));
 
     }
 }

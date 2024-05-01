@@ -34,7 +34,7 @@ if ($q->have_posts()) {
                     </div>
                     <div
                         class="card__link link--<?=$first_category_slug?>">
-                        Continue Reading <i class="fa-solid fa-arrow-right"></i>
+                        Continue Reading <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
             </a>

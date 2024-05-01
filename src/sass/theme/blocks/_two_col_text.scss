@@ -2,7 +2,9 @@
     .container-xl > strong {
         display: block;
     }
-    &__content {
-        columns: 2;
+    @media (min-width:768px) {
+        &__content {
+            columns: 2;
+        }
     }
 }

@@ -21886,9 +21886,11 @@ section .section_title a::after {
 .two_col_text .container-xl > strong {
   display: block;
 }
-.two_col_text__content {
-  -moz-columns: 2;
-  columns: 2;
+@media (min-width: 768px) {
+  .two_col_text__content {
+    -moz-columns: 2;
+    columns: 2;
+  }
 }
 
 .full_bleed_image {
@@ -22000,6 +22002,10 @@ section .section_title a::after {
 
 main {
   margin-top: var(--h-top);
+}
+
+main .container-xl {
+  padding-inline: 1.5rem;
 }
 
 .container-xl .container-xl {

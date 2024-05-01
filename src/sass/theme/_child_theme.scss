@@ -11,6 +11,10 @@ main {
     margin-top: var(--h-top);
 }
 
+main .container-xl {
+    padding-inline: 1.5rem;
+}
+
 .container-xl .container-xl {
     padding-inline: 0;
 }

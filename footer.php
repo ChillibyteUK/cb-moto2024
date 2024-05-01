@@ -2,7 +2,9 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-include get_stylesheet_directory() . '/page-templates/blocks/cb_related_posts.php';
+if (is_single()) {
+    include get_stylesheet_directory() . '/page-templates/blocks/cb_related_posts.php';
+}
 ?>
 </div> <!-- end page -->
 <div id="footer-top"></div>

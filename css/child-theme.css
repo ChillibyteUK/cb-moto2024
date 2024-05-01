@@ -21163,6 +21163,10 @@ strong {
   font-size: var(--fs-450);
 }
 
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
 .has-medium-font-size {
   font-size: var(--fs-450);
 }
@@ -21503,7 +21507,9 @@ section .section_title a::after {
 }
 .grid__card .card__title {
   font-size: var(--fs-600);
-  min-height: 6rem;
+  min-height: 6.5rem;
+  text-wrap: balance;
+  line-height: var(--lh-300);
 }
 .grid__card .card__excerpt {
   padding-block: 1rem 2rem;

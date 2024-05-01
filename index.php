@@ -27,7 +27,7 @@ get_header();
     <section class="latest all pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">
-                <h2>Latest trending articles</h2>
+                <h2 class="fs-800">Latest trending articles</h2>
             </div>
             <div class="latest_grid">
                 <?php
@@ -122,7 +122,7 @@ if ($postcount > 0) {
     <section class="technology pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">
-                <h2>Technology</h2>
+                <h2 class="fs-800">Technology</h2>
                 <a
                     href="<?=get_term_link('technology', 'category')?>">View
                     all</a>
@@ -212,7 +212,7 @@ if ($q->have_posts()) {
     <section class="hardware pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">
-                <h2>Hardware</h2>
+                <h2 class="fs-800">Hardware</h2>
                 <a
                     href="<?=get_term_link('hardware', 'category')?>">View
                     all</a>
@@ -302,7 +302,7 @@ if ($q->have_posts()) {
     <section class="device-care pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">
-                <h2>Device Care</h2>
+                <h2 class="fs-800">Device Care</h2>
                 <a
                     href="<?=get_term_link('device-care', 'category')?>">View
                     all</a>
@@ -381,7 +381,7 @@ if ($q->have_posts()) {
     <section class="security pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">
-                <h2>Security</h2>
+                <h2 class="fs-800">Security</h2>
                 <a
                     href="<?=get_term_link('security', 'category')?>">View
                     all</a>

@@ -60,33 +60,6 @@
             "append": ""
         },
         {
-            "key": "field_65f97084808bb",
-            "label": "Level",
-            "name": "level",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "strong": "strong",
-                "h2": "h2",
-                "h3": "h3",
-                "h4": "h4"
-            },
-            "default_value": "strong",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_65f9700df5c2a",
             "label": "Content",
             "name": "content",
@@ -125,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710846175
+    "modified": 1714567600
 }

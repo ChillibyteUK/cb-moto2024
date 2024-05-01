@@ -5,9 +5,8 @@ $bg = get_field('colour') ?? null;
     <div class="container-xl">
         <?php
         if (get_field('title') ?? null) {
-            $l = get_field('level');
             ?>
-            <h2 class="<?=$l?> pb-3"><?=get_field('title')?></h2>
+            <h2 class="pb-3"><?=get_field('title')?></h2>
             <?php
         }
         ?>

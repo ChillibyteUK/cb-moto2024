@@ -7,7 +7,7 @@ $bg = get_field('colour') ?? null;
         if (get_field('title') ?? null) {
             $l = get_field('level');
             ?>
-            <<?=$l?> class="pb-3"><?=get_field('title')?></<?=$l?>>
+            <h2 class="<?=$l?> pb-3"><?=get_field('title')?></h2>
             <?php
         }
         ?>

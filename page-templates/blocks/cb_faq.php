@@ -3,7 +3,7 @@
         <?php
         if (get_field('faq_title') ?? null) {
             ?>
-        <h3 class="mb-4"><?=get_field('faq_title')?></h3>
+        <h2 class="mb-4"><?=get_field('faq_title')?></h2>
             <?php
         }
         ?>

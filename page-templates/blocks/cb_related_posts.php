@@ -15,7 +15,7 @@ if ($q->have_posts()) {
     ?>
 <section class="related_posts <?=$first_category_slug?> py-5">
     <div class="container-xl">
-        <h3 class="text-center pb-4">From our blog</h3>
+        <h3 class="h2 text-center pb-4">From our blog</h3>
         <div class="related_grid grid_3_3">
         <?php
         while ($q->have_posts()) {

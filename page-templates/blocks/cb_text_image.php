@@ -9,18 +9,15 @@ $img = wp_get_attachment_image_url(get_field('image'),'full') ?: get_stylesheet_
 ?>
 <section class="text_image <?=$bg?>">
     <div class="container-fluid">
-        <div class="h3 d-md-none">
-            <?=get_field('title')?>
-        </div>
         <div class="row">
             <div class="col-md-6 text_image__image <?=$image_order?>"
                 style="background-image:url(<?=$img?>)">
             </div>
             <div class="col-md-6 <?=$text_order?>">
                 <div class="ps-xl-3 <?=$text_alignment?>">
-                    <h3 class="d-none d-md-block">
+                    <h2>
                         <?=get_field('title')?>
-                    </h3>
+                    </h2>
                     <?=get_field('content')?>
                 </div>
             </div>

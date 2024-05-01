@@ -70,6 +70,13 @@ a.anchor {
 ul.no-indent {
     padding-inline-start: 0;
 }
+ul:not([class]) {
+    padding-inline-start: 1.25rem;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
 
 #main {
     a:not(.grid__card, .btn, .services__card, .sectors__card, .news_grid__item, .related__card, .gallery__preview, .cs_index__card ) {

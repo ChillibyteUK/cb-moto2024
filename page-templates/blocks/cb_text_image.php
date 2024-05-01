@@ -9,7 +9,7 @@ $img = wp_get_attachment_image_url(get_field('image'),'full') ?: get_stylesheet_
 ?>
 <section class="text_image <?=$bg?>">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row gx-5">
             <div class="col-md-6 text_image__image <?=$image_order?>"
                 style="background-image:url(<?=$img?>)">
             </div>

@@ -17,7 +17,7 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-        color: var(--col-grey-600);
+        color: var(--col-light-blue);
 
         &__left,
         &__right {
@@ -26,11 +26,19 @@
 
         &__title {
             font-weight: var(--fw-600);
-            color: var(--col-grey-600);
+            color: var(--col-light-blue);
         }
         &__back {
             font-weight: var(--fw-600);
-            color: var(--col-navy-blue);
+            color: var(--col-light-blue);
+            position: relative;
+            &::before {
+                content: "\f177";
+                font-family: "font awesome 6 free";
+                font-weight: 900;
+                font-size: 12px;
+                margin-right: 0.25rem;
+            }
         }
         &__date {
             &::before {
@@ -51,7 +59,7 @@
         }
         &__category a {
             font-weight: var(--fw-400) !important;
-            color: var(--col-grey-600);
+            color: var(--col-light-blue);
             &:hover {
                 color: var(--col-navy-blue);
             }

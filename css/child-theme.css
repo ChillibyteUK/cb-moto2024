@@ -15,6 +15,7 @@
   --fs-300: 16px;
   --fs-400: 15px;
   --fs-500: 18px;
+  --fs-550: 22px;
   --fs-600: 26px;
   --fs-700: 40px;
   --fs-800: 40px;
@@ -21506,7 +21507,7 @@ section .section_title a::after {
   width: 60px;
 }
 .grid__card .card__title {
-  font-size: var(--fs-600);
+  font-size: var(--fs-550);
   min-height: 6rem;
   text-wrap: balance;
   line-height: var(--lh-300);

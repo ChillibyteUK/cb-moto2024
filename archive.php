@@ -15,7 +15,7 @@ if (! empty($queried_object) && isset($queried_object->slug)) {
 <main id="main" class="archive <?=$category_slug?>">
     <section class="index_hero index_hero--short"
         style="background-image: url(<?=$img?>)">
-        <h1 class="mb-2">Motoverse Blog</h1>
+        <h1 class="mb-3">Motoverse Blog</h1>
         <div class="text-center"><?=single_cat_title()?></div>
     </section>
     <section class="index_filters">
@@ -30,7 +30,7 @@ if (! empty($queried_object) && isset($queried_object->slug)) {
     <section class="latest pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">
-                <h2><?=single_cat_title()?> articles</h2>
+                <h2 class="fs-800"><?=single_cat_title()?> articles</h2>
             </div>
             <div class="latest_grid">
                 <?php

@@ -45,6 +45,35 @@
             "preview_size": "thumbnail"
         },
         {
+            "key": "field_6632018990793",
+            "label": "Trending",
+            "name": "trending",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Up to three posts. Blanks will be filled with the latest posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": 3,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_6463625d4f7c7",
             "label": "Config",
             "name": "",
@@ -100,5 +129,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710512327
+    "modified": 1714553457
 }

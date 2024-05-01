@@ -21400,7 +21400,7 @@ section .section_title a {
   position: relative;
 }
 section .section_title a::after {
-  content: " \f061";
+  content: " \f178";
   font-family: "font awesome 6 free";
   font-weight: 900;
 }
@@ -21770,7 +21770,7 @@ section .section_title a::after {
 }
 
 .all {
-  --_color: black;
+  --_color: var(--col-coral);
 }
 
 .blog {

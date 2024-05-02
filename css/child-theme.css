@@ -21516,6 +21516,7 @@ section .section_title a::after {
 .grid__card .card__excerpt {
   padding-block: 1rem 2rem;
   font-size: var(--fs-400);
+  line-height: 1.25;
 }
 .grid__card .card__meta {
   display: grid;

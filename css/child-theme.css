@@ -21794,12 +21794,6 @@ section .section_title a::after {
 .blog .post_meta {
   color: var(--col-light-blue);
 }
-.blog .post_meta .container-xl {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
 .blog .post_meta__title {
   font-weight: var(--fw-600);
   color: var(--col-light-blue);

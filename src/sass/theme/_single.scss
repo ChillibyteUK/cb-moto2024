@@ -11,12 +11,6 @@
         background-repeat: no-repeat;
     }
     .post_meta {
-        .container-xl {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
         color: var(--col-light-blue);
 
         &__title {

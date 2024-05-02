@@ -12,13 +12,13 @@ $cat = get_the_category();
     <section class="post_meta">
         <div class="container-xl">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex">
                     <a class="post_meta__back" href="/">Back</a>
                     <div class="post_meta__date">
                         <?=get_the_date('jS F Y')?>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex">
                     <div class="post_meta__title">Categories</div>
                     <div class="post_meta__category">
                         <a href="<?=get_category_link($cat[0]->term_id)?>"><?=$cat[0]->name?></a>

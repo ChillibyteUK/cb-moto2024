@@ -5,7 +5,7 @@
     line-height: 25px;
 
     .post_hero {
-        height: 200px;
+        height: 400px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -18,11 +18,6 @@
             gap: 1rem;
         }
         color: var(--col-light-blue);
-
-        &__left,
-        &__right {
-            display: flex;
-        }
 
         &__title {
             font-weight: var(--fw-600);

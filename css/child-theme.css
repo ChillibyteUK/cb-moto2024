@@ -21786,7 +21786,7 @@ section .section_title a::after {
   line-height: 25px;
 }
 .blog .post_hero {
-  height: 200px;
+  height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21799,9 +21799,6 @@ section .section_title a::after {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-}
-.blog .post_meta__left, .blog .post_meta__right {
-  display: flex;
 }
 .blog .post_meta__title {
   font-weight: var(--fw-600);

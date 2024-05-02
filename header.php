@@ -67,7 +67,7 @@ do_action('wp_body_open');
     <div id="wrapper-navbar" class="fixed-top">
         <nav id="navbar" class="navbar navbar-expand-md d-block py-auto" aria-labelledby="main-nav-label">
             <div class="container-xl d-block d-md-flex justify-content-start">
-                <div class="d-flex w-md-auto justify-content-start align-items-center px-2">
+                <div class="d-flex w-md-auto justify-content-start align-items-center px-md-2">
                     <button class="navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse" data-bs-target=".navbars" type="button" aria-label="Navigation">
                         <div class="navbar-toggler__container pointer">
                             <span class="navbar-toggler__bar1"></span>

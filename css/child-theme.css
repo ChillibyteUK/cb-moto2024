@@ -21957,7 +21957,6 @@ section .section_title a::after {
 }
 .related_grid .card__inner .card__link i {
   transition: padding-left 200ms ease-in-out;
-  font-size: 12px;
 }
 
 .two_images {

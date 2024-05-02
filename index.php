@@ -41,12 +41,12 @@ if (get_field('trending','options')) {
         $ph = get_the_post_thumbnail_url($p, 'large') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
         $cat = get_the_category($p);
         ?>
-            <a class="grid__card <?=$cat[0]->slug?>"
+            <a class="grid__card"
                 href="<?=get_the_permalink($p)?>">
                 <img class="card__image" src="<?=$ph?>">
                 <div class="card__inner">
                     <div
-                        class="card__category cat--<?=$cat[0]->slug?>">
+                        class="card__category cat--hardware">
                         <?=$cat[0]->name?>
                     </div>
                     <div class="card__title"><?=get_the_title($p)?>
@@ -85,12 +85,12 @@ if ($postcount > 0) {
             $ph = get_the_post_thumbnail_url(get_the_ID(), 'large') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
             $cat = get_the_category();
             ?>
-                <a class="grid__card <?=$cat[0]->slug?>"
+                <a class="grid__card"
                     href="<?=get_the_permalink()?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
                         <div
-                            class="card__category cat--<?=$cat[0]->slug?>">
+                            class="card__category cat--hardware">
                             <?=$cat[0]->name?>
                         </div>
                         <div class="card__title"><?=get_the_title()?>

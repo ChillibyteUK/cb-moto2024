@@ -11,7 +11,7 @@ $cat = get_the_category();
     </section>
     <section class="post_meta">
         <div class="container-xl">
-            <div class="row">
+            <div class="row gx-5">
                 <div class="col-md-6 d-flex">
                     <a class="post_meta__back" href="/">Back</a>
                     <div class="post_meta__date">

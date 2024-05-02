@@ -13,7 +13,7 @@ $img = wp_get_attachment_image_url(get_field('image'),'full') ?: get_stylesheet_
             <div class="col-md-6 text_image__image <?=$image_order?>"
                 style="background-image:url(<?=$img?>)">
             </div>
-            <div class="col-md-6 <?=$text_order?>">
+            <div class="col-md-6 <?=$text_order?> py-5">
                 <div class="ps-xl-3 <?=$text_alignment?>">
                     <h2>
                         <?=get_field('title')?>

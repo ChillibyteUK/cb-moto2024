@@ -22067,6 +22067,9 @@ ul:not([class]) {
   -webkit-padding-start: 1.25rem;
   padding-inline-start: 1.25rem;
 }
+ul:not([class]) li {
+  margin-bottom: 0.5rem;
+}
 
 p:last-of-type {
   margin-bottom: 0;

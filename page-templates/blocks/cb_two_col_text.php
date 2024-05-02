@@ -5,9 +5,16 @@ $bg = get_field('colour') ?? null;
     <div class="container-xl">
         <?php
         if (get_field('title') ?? null) {
-            ?>
+            if (get_field('style') == 'bold') {
+                ?>
+            <strong class="pb-4><?=get_field('title')?></strong>
+                <?php
+            }
+            else {
+                ?>
             <h2 class="pb-3"><?=get_field('title')?></h2>
-            <?php
+                <?php
+            }
         }
         ?>
         <div class="two_col_text__content">

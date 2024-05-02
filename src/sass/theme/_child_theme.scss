@@ -76,6 +76,9 @@ ul.no-indent {
 }
 ul:not([class]) {
     padding-inline-start: 1.25rem;
+    li {
+        margin-bottom: 0.5rem;
+    }
 }
 
 p:last-of-type {

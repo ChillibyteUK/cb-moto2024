@@ -21,7 +21,7 @@ $pb = in_array("bottom", $padding) ? 'pb-5' : null;
             </div>
             <div class="col-md-6 <?=$text_order?>">
                 <div class="ps-xl-3 d-flex flex-column justify-content-center h-100">
-                    <h2>
+                    <h2 class="mb-4">
                         <?=get_field('title')?>
                     </h2>
                     <?=get_field('content')?>

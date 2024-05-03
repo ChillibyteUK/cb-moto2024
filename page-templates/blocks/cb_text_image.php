@@ -15,7 +15,7 @@ $img = wp_get_attachment_image_url(get_field('image'),'full') ?: get_stylesheet_
             </div>
             <div class="col-md-6 <?=$text_order?>">
                 <div class="ps-xl-3 <?=$text_alignment?>">
-                    <h2>
+                    <h2 class="mb-4">
                         <?=get_field('title')?>
                     </h2>
                     <?=get_field('content')?>

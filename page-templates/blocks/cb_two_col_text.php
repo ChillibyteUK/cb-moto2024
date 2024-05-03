@@ -18,7 +18,7 @@ $pb = in_array("bottom", $padding) ? 'pb-5' : null;
             }
             else {
                 ?>
-            <h2 class="mb-3"><?=get_field('title')?></h2>
+            <h2 class="mb-4"><?=get_field('title')?></h2>
                 <?php
             }
         }

@@ -21131,7 +21131,7 @@ h3, .h3 {
 }
 
 h3:not(:first-of-type), .h3:not(:first-of-type) {
-  margin-top: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .fw-600,
@@ -21870,12 +21870,8 @@ section .section_title a::after {
   }
 }
 
-.text_image .row {
-  min-height: 400px;
-}
-.text_image__image {
-  background-size: cover;
-  background-position: center;
+.text_image img {
+  display: block;
 }
 
 .two_col_text .container-xl > strong {

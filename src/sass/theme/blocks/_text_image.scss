@@ -25,11 +25,14 @@
 }
 
 .text_image {
-    .row {
-        min-height: 400px;
-    }
-    &__image {
-        background-size: cover;
-        background-position: center;
+    // .row {
+    //     min-height: 400px;
+    // }
+    // &__image {
+    //     background-size: cover;
+    //     background-position: center;
+    // }
+    img {
+        display: block;
     }
 }

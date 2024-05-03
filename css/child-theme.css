@@ -21870,6 +21870,10 @@ section .section_title a::after {
   }
 }
 
+.text_image__image {
+  background-size: cover;
+  background-position: center;
+}
 .text_image img {
   display: block;
 }

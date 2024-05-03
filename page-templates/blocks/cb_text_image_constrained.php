@@ -15,7 +15,7 @@ $pb = in_array("bottom", $padding) ? 'pb-5' : null;
 ?>
 <section class="text_image <?=$bg?> <?=$pt?> <?=$pb?>">
     <div class="container-xl">
-        <div class="row gx-5 gy-4">
+        <div class="row g-5">
             <div class="col-md-6 text_image__image d-flex align-items-center <?=$image_order?>">
                 <img src="<?=$img?>" alt="">
             </div>

@@ -21130,6 +21130,10 @@ h3, .h3 {
   text-wrap: balance;
 }
 
+h3:not(:first-of-type), .h3:not(:first-of-type) {
+  margin-top: 0.5rem;
+}
+
 .fw-600,
 strong {
   font-weight: var(--fw-600);

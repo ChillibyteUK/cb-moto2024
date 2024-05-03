@@ -1,4 +1,13 @@
-<section class="faq py-5">
+<?php
+
+$padding = get_field('padding');
+if (!is_array($padding)) {
+    $padding = [];  // Assign an empty array if not an array
+}
+$pt = in_array("top", $padding) ? 'pt-5' : null;
+$pb = in_array("bottom", $padding) ? 'pb-5' : null;
+?>
+<section class="faq <?=$pt?> <?=$pb?>">
     <div class="container-xl">
         <?php
         if (get_field('faq_title') ?? null) {

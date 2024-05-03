@@ -1,10 +1,10 @@
 {
     "key": "group_65f99de91c953",
-    "title": "CB Text \/ Image",
+    "title": "CB Text \/ Image (Constrained)",
     "fields": [
         {
             "key": "field_65f99de92b8a7",
-            "label": "CB Text \/ Image",
+            "label": "CB Text \/ Image (Constrained)",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -30,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -42,7 +42,7 @@
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
-            "layout": "horizontal",
+            "layout": "vertical",
             "save_other_choice": 0
         },
         {
@@ -55,7 +55,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -74,7 +74,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -88,6 +88,32 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_6634c364982ef",
+            "label": "Padding",
+            "name": "padding",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "top",
+                "bottom": "bottom"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
         },
         {
             "key": "field_65f99de93a4a3",
@@ -148,5 +174,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713873156
+    "modified": 1714733976
 }

@@ -17,7 +17,7 @@ $restOfContent = preg_replace('/<p>.*?<\/p>/', '', $text, 1);
         <?php
         if ($restOfContent ?? null) {
             ?>
-        <div class="pt-5"><?=$restOfContent?></div>
+        <div class="pt-4"><?=$restOfContent?></div>
         <?php
         }
 ?>

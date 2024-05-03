@@ -21937,7 +21937,7 @@ section .section_title a::after {
 .related_grid .card__inner {
   padding-block: 0.5rem;
   display: grid;
-  grid-template-rows: 20px 1fr auto;
+  grid-template-rows: 25px 1fr auto;
 }
 .related_grid .card__inner .card__date {
   font-size: var(--fs-300);
@@ -21948,7 +21948,7 @@ section .section_title a::after {
   font-weight: var(--fw-600);
   min-height: 3rem;
   text-wrap: balance;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 .related_grid .card__inner .card__link {
   font-size: var(--fs-400);
@@ -21957,6 +21957,7 @@ section .section_title a::after {
 }
 .related_grid .card__inner .card__link i {
   transition: padding-left 200ms ease-in-out;
+  margin-left: 0.5rem;
 }
 
 .two_images {

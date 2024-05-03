@@ -33,7 +33,7 @@
     .card__inner {
         padding-block: 0.5rem;
         display: grid;
-        grid-template-rows: 20px 1fr auto;
+        grid-template-rows: 25px 1fr auto;
 
         .card__date {
             font-size: var(--fs-300);
@@ -45,7 +45,7 @@
             font-weight: var(--fw-600);
             min-height: 3rem;
             text-wrap: balance;
-            margin-bottom: 0.25rem;
+            margin-bottom: 1rem;
         }
         .card__link {
             font-size: var(--fs-400);
@@ -53,6 +53,7 @@
             color: var(--_color);
             i {
                 transition: padding-left 200ms ease-in-out;
+                margin-left: 0.5rem;
             }
         }
     }

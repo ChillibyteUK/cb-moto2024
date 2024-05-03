@@ -16,10 +16,10 @@ $pb = in_array("bottom", $padding) ? 'pb-5' : null;
 <section class="text_image <?=$bg?> <?=$pt?> <?=$pb?>">
     <div class="container-xl">
         <div class="row g-5">
-            <div class="col-md-6 text_image__image d-flex align-items-center <?=$image_order?>">
+            <div class="col-lg-6 text_image__image d-flex align-items-center <?=$image_order?>">
                 <img src="<?=$img?>" alt="">
             </div>
-            <div class="col-md-6 <?=$text_order?>">
+            <div class="col-lg-6 <?=$text_order?>">
                 <div class="ps-xl-3 d-flex flex-column justify-content-center h-100">
                     <h2 class="mb-4">
                         <?=get_field('title')?>

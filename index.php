@@ -19,7 +19,6 @@ get_header();
             <a class="category-item" href="#technology">Technology</a>
             <a class="category-item" href="#hardware">Hardware</a>
             <a class="category-item" href="#device-care">Device Care</a>
-            <a class="category-item" href="#security">Security</a>
         </div>
     </section>
     <!-- LATEST POSTS -->
@@ -34,38 +33,38 @@ get_header();
 $postcount = 3;
 $pinned = array();
 // first, any trending posts from Site-Wide Settings
-if (get_field('trending','options')) {
-    foreach (get_field('trending','options') as $p) {
+if (get_field('trending', 'options')) {
+    foreach (get_field('trending', 'options') as $p) {
         // var_dump($p);
         $pinned[] = $p;
         $ph = get_the_post_thumbnail_url($p, 'large') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
         $cat = get_the_category($p);
         ?>
-            <a class="grid__card"
-                href="<?=get_the_permalink($p)?>">
-                <img class="card__image" src="<?=$ph?>">
-                <div class="card__inner">
-                    <div
-                        class="card__category cat--hardware">
-                        <?=$cat[0]->name?>
-                    </div>
-                    <div class="card__title"><?=get_the_title($p)?>
-                    </div>
-                    <div class="card__meta">
-                        <div class="card__meta_date">
-                            <?=get_the_date('j M, Y',$p)?>
+                <a class="grid__card"
+                    href="<?=get_the_permalink($p)?>">
+                    <img class="card__image" src="<?=$ph?>">
+                    <div class="card__inner">
+                        <div class="card__category cat--hardware">
+                            <?=$cat[0]->name?>
                         </div>
-                        <div class="card__meta_time">
-                            <?=estimate_reading_time_in_minutes(get_the_content(null, false, $p), 200, true, true)?>
+                        <div class="card__title">
+                            <?=get_the_title($p)?>
                         </div>
-                        <div
-                            class="card__meta_link link--<?=$cat[0]->slug?>">
-                            <i class="fa-solid fa-arrow-right-long"></i>
+                        <div class="card__meta">
+                            <div class="card__meta_date">
+                                <?=get_the_date('j M, Y', $p)?>
+                            </div>
+                            <div class="card__meta_time">
+                                <?=estimate_reading_time_in_minutes(get_the_content(null, false, $p), 200, true, true)?>
+                            </div>
+                            <div
+                                class="card__meta_link link--<?=$cat[0]->slug?>">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
-        <?php
+                </a>
+                <?php
         $postcount--;
     }
 
@@ -89,8 +88,7 @@ if ($postcount > 0) {
                     href="<?=get_the_permalink()?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
-                        <div
-                            class="card__category cat--hardware">
+                        <div class="card__category cat--hardware">
                             <?=$cat[0]->name?>
                         </div>
                         <div class="card__title"><?=get_the_title()?>
@@ -109,7 +107,7 @@ if ($postcount > 0) {
                         </div>
                     </div>
                 </a>
-            <?php
+                <?php
         }
     }
 }
@@ -383,6 +381,8 @@ if ($q->have_posts()) {
         </div>
     </section>
     <!-- SECURITY -->
+    <?php
+    /*
     <a id="security" class="anchor"></a>
     <section class="security pb-5 mb-5">
         <div class="container-xl">
@@ -460,6 +460,8 @@ if ($q->have_posts()) {
             </div>
         </div>
     </section>
+    */
+?>
 </main>
 <?php
 

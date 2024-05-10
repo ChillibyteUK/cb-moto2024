@@ -21124,7 +21124,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
   font-weight: var(--fw-600);
   margin-bottom: 0.5rem;
   text-wrap: balance;

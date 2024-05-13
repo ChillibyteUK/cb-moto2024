@@ -21465,9 +21465,11 @@ section .section_title a::after {
   min-width: 60px !important;
 }
 
-.archive .latest .grid__card:nth-of-type(1) {
-  grid-column: span 3;
-  grid-template-columns: 1fr 1fr;
+@media (min-width: 992px) {
+  .archive .latest .grid__card:nth-of-type(1) {
+    grid-column: span 3;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .archive .technology .grid__card:nth-of-type(1) {
   background-color: var(--_color);

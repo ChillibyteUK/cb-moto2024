@@ -21773,12 +21773,13 @@ section .section_title a::after {
 
 .security {
   --_color: var(--col-off-white);
+  --_hl-color: var(--col-coral);
 }
 .security .grid__card:nth-of-type(1) {
   background-color: var(--_color);
 }
 .security .grid__card:nth-of-type(1) .cat--security {
-  border-color: white;
+  border-color: var(--_hl-color);
 }
 .security .grid__card:nth-of-type(1) .card__meta_date {
   color: black;
@@ -21793,17 +21794,19 @@ section .section_title a::after {
 .all {
   --_color: var(--col-off-white);
 }
-.all .link--hardware,
-.all .link--security,
-.all .cat--hardware,
-.all .cat--security {
+
+.link--hardware,
+.link--security,
+.cat--hardware,
+.cat--security {
   --_color: var(--col-coral);
   --_hl-color: var(--col-coral);
 }
-.all .link--device-care,
-.all .link--technology,
-.all .cat--device-care,
-.all .cat--technology {
+
+.link--device-care,
+.link--technology,
+.cat--device-care,
+.cat--technology {
   --_color: var(--col-light-blue);
   --_hl-color: var(--col-light-blue);
 }

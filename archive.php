@@ -71,7 +71,10 @@ if (have_posts()) {
                             </div>
                             <div
                                 class="card__meta_link link--<?=$cat[0]->slug?>">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-arrow-right-long fa-stack-1x fa-inverse"></i>
+                                </span>
                             </div>
                         </div>
                     </div>

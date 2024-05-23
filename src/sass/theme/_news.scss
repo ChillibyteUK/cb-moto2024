@@ -421,10 +421,12 @@ section .section_title {
 
 .security {
     --_color: var(--col-off-white);
+    --_hl-color: var(--col-coral);
     .grid__card:nth-of-type(1) {
         background-color: var(--_color);
         .cat--security {
-            border-color: white;
+            // border-color: white;
+            border-color: var(--_hl-color);
         }
         .card__meta_date {
             // color: var(--col-grey-900);
@@ -443,19 +445,18 @@ section .section_title {
 
 .all {
     --_color: var(--col-off-white);
-
-    .link--hardware,
-    .link--security,
-    .cat--hardware,
-    .cat--security {
-        --_color: var(--col-coral);
-        --_hl-color: var(--col-coral);
-    }
-    .link--device-care,
-    .link--technology,
-    .cat--device-care,
-    .cat--technology {
-        --_color: var(--col-light-blue);
-        --_hl-color: var(--col-light-blue);
-    }
+}
+.link--hardware,
+.link--security,
+.cat--hardware,
+.cat--security {
+    --_color: var(--col-coral);
+    --_hl-color: var(--col-coral);
+}
+.link--device-care,
+.link--technology,
+.cat--device-care,
+.cat--technology {
+    --_color: var(--col-light-blue);
+    --_hl-color: var(--col-light-blue);
 }

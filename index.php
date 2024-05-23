@@ -44,7 +44,7 @@ if (get_field('trending', 'options')) {
                     href="<?=get_the_permalink($p)?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
-                        <div class="card__category cat--hardware">
+                        <div class="card__category cat--<?=$cat[0]->slug?>">
                             <?=$cat[0]->name?>
                         </div>
                         <div class="card__title">
@@ -59,7 +59,10 @@ if (get_field('trending', 'options')) {
                             </div>
                             <div
                                 class="card__meta_link link--<?=$cat[0]->slug?>">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-arrow-right-long fa-stack-1x fa-inverse"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -102,7 +105,10 @@ if ($postcount > 0) {
                             </div>
                             <div
                                 class="card__meta_link link--<?=$cat[0]->slug?>">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-arrow-right-long fa-stack-1x fa-inverse"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -194,7 +200,10 @@ if ($q->have_posts()) {
                             </div>
                             <div
                                 class="card__meta_link link--<?=$cat[0]->slug?>">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-arrow-right-long fa-stack-1x fa-inverse"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -287,7 +296,10 @@ if ($q->have_posts()) {
                             </div>
                             <div
                                 class="card__meta_link link--<?=$cat[0]->slug?>">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-arrow-right-long fa-stack-1x fa-inverse"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -367,7 +379,10 @@ if ($q->have_posts()) {
                             </div>
                             <div
                                 class="card__meta_link link--<?=$cat[0]->slug?>">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                    <i class="fa-solid fa-arrow-right-long fa-stack-1x fa-inverse"></i>
+                                </span>
                             </div>
                         </div>
                     </div>

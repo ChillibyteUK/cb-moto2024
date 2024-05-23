@@ -25,7 +25,7 @@ section .section_title {
         flex-grow: 1;
     }
     a {
-        color: var(--_color);
+        color: var(--_hl-color);
         position: relative;
         &::after {
             content: " \f178";
@@ -33,13 +33,13 @@ section .section_title {
             font-weight: 900;
         }
     }
-    border-bottom: 2px solid var(--_color);
+    border-bottom: 2px solid var(--_hl-color);
 
 }
 
 
 .index_filters {
-    background-color: var(--col-light-blue);
+    background-color: var(--col-off-white);
     color: var(--col-navy-blue);
     text-transform: uppercase;
     padding-block: 2rem;
@@ -117,6 +117,10 @@ section .section_title {
     text-decoration: none;
     display: grid;
     grid-template-rows: auto 1fr;
+
+    border-radius: 0.75rem;
+    overflow: clip;
+
     &:hover {
         color: black;
         .card__meta_link {
@@ -174,7 +178,8 @@ section .section_title {
         &_time {
             grid-area: time;
             font-size: var(--fs-200);
-            color: var(--col-grey-600);
+            // color: var(--col-grey-600);
+            color: var(--col-grey-900);
             font-weight: 500;
             font-style: italic;
             &::before {
@@ -186,7 +191,8 @@ section .section_title {
         }
         &_link {
             grid-area: link;
-            font-size: 26px;
+            // font-size: 26px;
+            font-size: 8px;
             display: flex;
             justify-content: flex-end;
             padding-right: 1rem;
@@ -198,28 +204,28 @@ section .section_title {
     }
 
     .cat--technology {
-        border-bottom: 2px solid var(--_color);
+        border-bottom: 2px solid var(--_hl-color);
     }    
     .link--technology {
-        color: var(--_color);
+        color: var(--_hl-color);
     }
     .cat--hardware {
-        border-bottom: 2px solid var(--_color);
+        border-bottom: 2px solid var(--_hl-color);
     }    
     .link--hardware {
-        color: var(--_color);
+        color: var(--_hl-color);
     }
     .cat--device-care {
-        border-bottom: 2px solid var(--_color);
+        border-bottom: 2px solid var(--_hl-color);
     }    
     .link--device-care {
-        color: var(--_color);
+        color: var(--_hl-color);
     }
     .cat--security {
-        border-bottom: 2px solid var(--_color);
+        border-bottom: 2px solid var(--_hl-color);
     }    
     .link--security {
-        color: var(--_color);
+        color: var(--_hl-color);
     }
 
 }
@@ -339,84 +345,117 @@ section .section_title {
 
 
 .technology {
-    --_color: var(--col-light-blue);
+    --_color: var(--col-off-white);
+    --_hl-color: var(--col-light-blue);
     
     .grid__card:nth-of-type(1) {
         background-color: var(--_color);
         .cat--technology {
-            border-color: white;
+            // border-color: white;
+            border-color: var(--_hl-color);
         }
         .card__meta_date {
+            // color: var(--col-grey-900);
             color: black;
         }
         .card__meta_time {
-            color: var(--col-grey-200);
+            // color: var(--col-grey-200);
+            color: var(--col-grey-900);
         }
         .card__meta_link {
-            color: white;
+            // color: white;
+            color: var(--_hl-color);
         }
     }
 }
 
 .hardware {
-    --_color: var(--col-coral);
+    --_color: var(--col-off-white);
+    --_hl-color: var(--col-coral);
     
     .grid__card:nth-of-type(1) {
         background-color: var(--_color);
         .cat--hardware {
-            border-color: white;
+            // border-color: white;
+            border-color: var(--_hl-color);
         }
         .card__meta_date {
+            // color: var(--col-grey-900);
             color: black;
         }
         .card__meta_time {
-            color: var(--col-grey-200);
+            // color: var(--col-grey-200);
+            color: var(--col-grey-900);
         }
         .card__meta_link {
-            color: white;
+            // color: white;
+            color: var(--_hl-color);
         }
     }
 }
 
 .device-care {
-    --_color: var(--col-light-blue);
+    --_color: var(--col-off-white);
+    --_hl-color: var(--col-light-blue);
 
     .grid__card:nth-of-type(1) {
         background-color: var(--_color);
         .cat--device-care {
-            border-color: white;
+            // border-color: white;
+            border-color: var(--_hl-color);
         }
         .card__meta_date {
+            // color: var(--col-grey-900);
             color: black;
         }
         .card__meta_time {
-            color: var(--col-grey-200);
+            // color: var(--col-grey-200);
+            color: var(--col-grey-900);
         }
         .card__meta_link {
-            color: white;
+            // color: white;
+            color: var(--_hl-color);
         }
     }
 }
 
 .security {
-    --_color: var(--col-coral);
+    --_color: var(--col-off-white);
     .grid__card:nth-of-type(1) {
         background-color: var(--_color);
         .cat--security {
             border-color: white;
         }
         .card__meta_date {
+            // color: var(--col-grey-900);
             color: black;
         }
         .card__meta_time {
-            color: var(--col-grey-200);
+            // color: var(--col-grey-200);
+            color: var(--col-grey-900);
         }
         .card__meta_link {
-            color: white;
+            // color: white;
+            color: var(--_hl-color);
         }
     }
 }
 
 .all {
-    --_color: var(--col-coral);
+    --_color: var(--col-off-white);
+
+    .link--hardware,
+    .link--security,
+    .cat--hardware,
+    .cat--security {
+        --_color: var(--col-coral);
+        --_hl-color: var(--col-coral);
+    }
+    .link--device-care,
+    .link--technology,
+    .cat--device-care,
+    .cat--technology {
+        --_color: var(--col-light-blue);
+        --_hl-color: var(--col-light-blue);
+    }
 }

@@ -91,7 +91,7 @@ if ($postcount > 0) {
                     href="<?=get_the_permalink()?>">
                     <img class="card__image" src="<?=$ph?>">
                     <div class="card__inner">
-                        <div class="card__category cat--hardware">
+                        <div class="card__category cat--<?=$cat[0]->slug?>">
                             <?=$cat[0]->name?>
                         </div>
                         <div class="card__title"><?=get_the_title()?>

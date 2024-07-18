@@ -21391,6 +21391,7 @@ footer .colophon {
   object-fit: cover;
   position: absolute;
   z-index: -1;
+  height: 100%;
 }
 .index_hero--short {
   max-height: var(--short-hero-height);
@@ -21830,6 +21831,7 @@ section .section_title a::after {
   -o-object-fit: cover;
   object-fit: cover;
   z-index: -1;
+  height: 100%;
 }
 .blog .post_meta {
   color: var(--col-light-blue);

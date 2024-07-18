@@ -21379,6 +21379,7 @@ footer .colophon {
 .index_hero {
   height: var(--full-hero-height);
   position: relative;
+  overflow: hidden;
   display: grid;
   place-content: center;
   color: white;

@@ -3,11 +3,18 @@
 defined('ABSPATH') || exit;
 get_header();
 $img = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
+
+$img = get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'post_hero__image'));
+if (empty($img)) {
+    $default_image_url = get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
+    $img = '<img src="' . esc_url($default_image_url) . '" alt="Default Image class="post_hero__image">';
+}
+
 $cat = get_the_category();
 ?>
 <main id="main" class="blog">
-    <section class="post_hero mb-5"
-        style="background-image: url(<?=$img?>)">
+    <section class="post_hero mb-5">
+        <?=$img?>
     </section>
     <section class="post_meta">
         <div class="container-xl">

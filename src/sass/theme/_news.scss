@@ -1,8 +1,11 @@
 .index_hero {
     height: var(--full-hero-height);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    &__image {
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
+    position: relative;
     display: grid;
     place-content: center;
     color: white;

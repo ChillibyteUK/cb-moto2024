@@ -4,13 +4,11 @@ defined('ABSPATH') || exit;
 
 $page_for_posts = get_option('page_for_posts');
 
-$img = wp_get_attachment_image_url(get_field('blog_index_hero_image', 'options'), 'full');
-
 get_header();
 ?>
 <main id="main">
-    <section class="index_hero"
-        style="background-image: url(<?=$img?>)">
+    <section class="index_hero">
+        <?=wp_get_attachment_image(get_field('blog_index_hero_image','options'),'full',false,array('class' => 'index_hero__image'))?>
         <h1 class="mx-2">Motoverse Blog</h1>
     </section>
     <section class="index_filters">

@@ -21378,14 +21378,18 @@ footer .colophon {
 
 .index_hero {
   height: var(--full-hero-height);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   display: grid;
   place-content: center;
   color: white;
   text-transform: uppercase;
   font-size: var(--fs-900);
+}
+.index_hero__image {
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 .index_hero--short {
   max-height: var(--short-hero-height);
@@ -21817,9 +21821,14 @@ section .section_title a::after {
 }
 .blog .post_hero {
   height: 400px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.blog .post_hero__image {
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
 }
 .blog .post_meta {
   color: var(--col-light-blue);

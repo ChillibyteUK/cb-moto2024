@@ -21247,11 +21247,15 @@ strong {
   width: 22px;
   height: 16px;
   align-self: center;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 #wrapper-navbar .mobile-icons a img {
   width: 22px;
   height: 22px;
   align-self: center;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 #wrapper-navbar .navbar-toggler {
   border: none;
@@ -21284,11 +21288,15 @@ strong {
   width: 22px;
   height: 16px;
   align-self: center;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 #wrapper-navbar .header-icons .support-icon {
   width: 22px;
   height: 22px;
   align-self: center;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 #wrapper-navbar .header-icons a {
   color: var(--col-navy-blue);

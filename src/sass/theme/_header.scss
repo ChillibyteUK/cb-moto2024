@@ -43,11 +43,13 @@
             width: 22px;
             height: 16px;
             align-self: center;
+            object-fit: contain;
         }
         a img {
             width: 22px;
             height: 22px;
             align-self: center;
+            object-fit: contain;
         }
     }
 
@@ -85,11 +87,13 @@
             width: 22px;
             height: 16px;
             align-self: center;
+            object-fit: contain;
         }
         .support-icon {
             width: 22px;
             height: 22px;
             align-self: center;
+            object-fit: contain;
         }
         a {
             color: var(--col-navy-blue);

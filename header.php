@@ -84,7 +84,7 @@ do_action('wp_body_open');
                             <img class="newsletter-icon" alt="Newsletter envelop" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png">
                         </div-->
                         <a class="d-flex align-items-center" href="https://motorola-global-en-uk.custhelp.com/" target="_blank">
-                            <img class="support-icon" alt="Support icon" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png">
+                            <img class="support-icon" alt="Support icon" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" width="22px" height="24px">
                         </a>
                     </div>
                 </div>

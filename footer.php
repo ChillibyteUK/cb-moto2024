@@ -14,7 +14,7 @@ if (is_single()) {
             <div class="col-lg-4 text-center">
                 Official website
                 <img src="<?=get_stylesheet_directory_uri()?>/img/c-rd-motorola@2x.png"
-                    class="footer__logo" alt="Motorola" width=150px>
+                    class="footer__logo" alt="Motorola" width="150px" height="30px">
             </div>
             <div class="col-lg-4 text-center">
                 <div class="fs-200 mb-1">Follow us on social media:</div>
@@ -51,7 +51,7 @@ if (is_single()) {
             </div>
             <div class="text-center">
                 Safe website
-                <img src="<?=get_stylesheet_directory_uri()?>/img/secure-site.png" class="secure-site">
+                <img src="<?=get_stylesheet_directory_uri()?>/img/secure-site.png" class="secure-site" width="29px" height="30px">
             </div>
         </div>
     </div>

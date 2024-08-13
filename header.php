@@ -80,9 +80,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a href="/" class="navbar-brand logo-icon" rel="home"><img src="<?=get_stylesheet_directory_uri()?>/img/motorola-2.png" width=30 height=30 alt="Motorola logo"></a>
                     </div>
                     <div class="mobile-icons d-flex gap-3 ms-auto d-md-none">
-                        <!--div role="button" class="d-flex" data-bs-toggle="modal" data-bs-target="#newsletterModal">
-                            <img class="newsletter-icon" alt="Newsletter envelop" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png">
-                        </div-->
                         <a class="d-flex align-items-center" href="https://motorola-global-en-uk.custhelp.com/" target="_blank">
                             <img class="support-icon" alt="Support icon" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" width="22px" height="24px">
                         </a>
@@ -105,16 +102,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     ?>
                 </div>
                 <div class="d-none d-md-flex ms-auto align-items-center header-icons gap-4 gap-lg-5">
-                    <!-- div role="button" class="d-flex" data-bs-toggle="modal" data-bs-target="#newsletterModal">
-                        <img class="newsletter-icon" alt="Newsletter envelop" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/icon-news10off.png">
-                        <div class="ps-2 lh-300 fs-100 newsletter-text">Subscribe to<br><span class="fs-400 text-coral fw-600">Get 5% Off</span></div>
-                    </div -->
                     <a class="d-flex align-items-center" href="https://motorola-global-en-uk.custhelp.com/" target="_blank">
                         <img class="support-icon" alt="Support icon" data-src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png" loading="lazy" src="https://motorolaimgrepo.vtexassets.com/arquivos/menu-header-support-icon.png">
                         <div class="ps-2 lh-300 fs-100 support-text">Support</div></a>
                     </a>
                 </div>
             </div>
-		
         </nav>
     </div>

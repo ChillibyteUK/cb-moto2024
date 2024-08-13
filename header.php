@@ -37,6 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','<?=get_field('ga_property','options')?>');</script>
 <!-- End Google Tag Manager -->
         <?php
+        }
     }
     if (get_field('google_site_verification','options')) {
         echo '<meta name="google-site-verification" content="' . get_field('google_site_verification','options') . '" />';

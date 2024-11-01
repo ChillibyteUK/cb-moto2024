@@ -225,10 +225,10 @@ section .section_title {
     .link--device-care {
         color: var(--_hl-color);
     }
-    .cat--security {
+    .cat--news {
         border-bottom: 2px solid var(--_hl-color);
     }    
-    .link--security {
+    .link--news {
         color: var(--_hl-color);
     }
 
@@ -423,12 +423,12 @@ section .section_title {
     }
 }
 
-.security {
+.news {
     --_color: var(--col-off-white);
     --_hl-color: var(--col-coral);
     .grid__card:nth-of-type(1) {
         background-color: var(--_color);
-        .cat--security {
+        .cat--news {
             // border-color: white;
             border-color: var(--_hl-color);
         }
@@ -451,9 +451,9 @@ section .section_title {
     --_color: var(--col-off-white);
 }
 .link--hardware,
-.link--security,
+.link--news,
 .cat--hardware,
-.cat--security {
+.cat--news {
     --_color: var(--col-coral);
     --_hl-color: var(--col-coral);
 }

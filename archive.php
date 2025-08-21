@@ -78,7 +78,6 @@ if ( ! empty( $queried_object ) && isset( $queried_object->slug ) ) {
                                 <div class="card__title"><?= esc_html( get_the_title() ); ?>
                                     <?php
                                     if ( 1 === $c ) {
-
 										global $post;
 										$old_post    = $post;
 										$post        = get_post( $p );

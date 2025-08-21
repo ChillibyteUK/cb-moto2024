@@ -78,14 +78,17 @@ if ( ! empty( $queried_object ) && isset( $queried_object->slug ) ) {
                                 <div class="card__title"><?= esc_html( get_the_title() ); ?>
                                     <?php
                                     if ( 1 === $c ) {
-                                    	?>
-                                        <div class="card__excerpt d-md-none">
-                                            <?= wp_kses_post( wp_trim_words( get_the_content( null, false, get_the_ID() ), 20 ) ); ?>
-                                        </div>
-                                        <div class="card__excerpt d-none d-md-block">
-                                            <?= wp_kses_post( wp_trim_words( get_the_content( null, false, get_the_ID() ), 50 ) ); ?>
-                                        </div>
-                                    	<?php
+
+										global $post;
+										$old_post    = $post;
+										$post        = get_post( $p );
+										$raw_content = apply_filters( 'the_content', $post->post_content );
+										$raw_content = preg_replace( '/<h1[^>]*>.*?<\/h1>/is', '', $raw_content, 1 );
+										$post        = $old_post;
+										$excerpt     = wp_trim_words( wp_strip_all_tags( $raw_content ), 50 );
+										?>
+										<div class="card__excerpt"><?= esc_html( $excerpt ); ?></div>
+										<?php
                                     }
                                     ?>
                                 </div>

@@ -7,9 +7,9 @@
 @import "single";
 @import "blocks/blocks";
 
-main {
-    margin-top: var(--h-top);
-}
+// main {
+//     margin-top: var(--h-top);
+// }
 
 main .container-xl {
     padding-inline: 1.5rem;
@@ -27,10 +27,14 @@ a.noline {
     text-decoration: none;
 }
 a.anchor {
-    display: block;
+    display: block !important;
     position: relative;
     top: calc(var(--h-top) * -1);
     visibility: hidden;
+    line-height: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 @media (min-width:992px) {
@@ -92,6 +96,17 @@ p:last-of-type {
         position: relative;
         display: inline-block;
     }
+}
+
+.prenav {
+    background-color: var(--col-off-white);
+}
+#blognav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--col-off-white);
+    padding-block: 1rem;
 }
 
 // show stuff that overflows horizontally

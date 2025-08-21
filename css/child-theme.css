@@ -27,7 +27,7 @@
   --shadow-out: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   --shadow-in: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   --grid-gap: 1.5rem;
-  --h-top: 58px;
+  --h-top: 60px;
 }
 
 /*!
@@ -21429,14 +21429,10 @@ section .section_title a::after {
 }
 
 .index_filters {
-  background-color: var(--col-off-white);
   color: var(--col-navy-blue);
   text-transform: uppercase;
-  padding-block: 2rem;
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
-  padding-inline: 1rem;
 }
 .index_filters .category-list {
   display: flex;
@@ -21453,6 +21449,7 @@ section .section_title a::after {
   position: relative;
   padding-right: 2rem;
   font-size: var(--fs-400);
+  text-decoration: none;
 }
 .index_filters .category-item:not(:last-child)::after {
   content: "/";
@@ -21461,6 +21458,10 @@ section .section_title a::after {
   color: var(--col-navy-blue);
 }
 
+.latest {
+  padding-top: 1rem;
+  background: linear-gradient(to bottom, var(--col-off-white) 15%, white 15%);
+}
 .latest_grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -21824,6 +21825,26 @@ section .section_title a::after {
   --_hl-color: var(--col-light-blue);
 }
 
+.span-all {
+  grid-column: 1/-1;
+}
+.span-all .card__image {
+  aspect-ratio: 2.71/1;
+}
+.span-all .card__category {
+  min-width: 100px !important;
+  border-color: white;
+}
+.span-all .card__meta_time {
+  color: white;
+}
+.span-all .card__meta_link {
+  color: white !important;
+}
+.span-all .card__meta_link .fa-circle {
+  display: none;
+}
+
 .blog {
   font-size: var(--fs-400);
   line-height: 25px;
@@ -22043,10 +22064,6 @@ section .section_title a::after {
   margin-bottom: 0.25rem;
 }
 
-main {
-  margin-top: var(--h-top);
-}
-
 main .container-xl {
   padding-inline: 1.5rem;
 }
@@ -22064,10 +22081,14 @@ a.noline {
 }
 
 a.anchor {
-  display: block;
+  display: block !important;
   position: relative;
   top: calc(var(--h-top) * -1);
   visibility: hidden;
+  line-height: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 992px) {
@@ -22131,6 +22152,18 @@ p:last-of-type {
   text-decoration: none;
   position: relative;
   display: inline-block;
+}
+
+.prenav {
+  background-color: var(--col-off-white);
+}
+
+#blognav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--col-off-white);
+  padding-block: 1rem;
 }
 
 /*

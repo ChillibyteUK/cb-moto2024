@@ -44,14 +44,10 @@ section .section_title {
 
 
 .index_filters {
-    background-color: var(--col-off-white);
     color: var(--col-navy-blue);
     text-transform: uppercase;
-    padding-block: 2rem;
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
-    padding-inline: 1rem;
 
     .category-list {
         display: flex;
@@ -69,6 +65,7 @@ section .section_title {
         position: relative;
         padding-right: 2rem;
         font-size: var(--fs-400);
+        text-decoration: none;
     }
     
     .category-item:not(:last-child)::after {
@@ -80,6 +77,9 @@ section .section_title {
 }
 
 .latest {
+    padding-top: 1rem;
+    background: linear-gradient( to bottom, var(--col-off-white) 15%, white 15%);
+
     &_grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -463,4 +463,25 @@ section .section_title {
 .cat--technology {
     --_color: var(--col-light-blue);
     --_hl-color: var(--col-light-blue);
+}
+
+
+.span-all {
+    grid-column: 1 / -1;
+    .card__image {
+        aspect-ratio: 2.71 / 1;
+    }
+    .card__category {
+        min-width: 100px !important;
+        border-color: white;
+    }
+    .card__meta_time {
+        color: white;
+    }
+    .card__meta_link {
+        .fa-circle {
+            display: none;
+        }
+        color: white !important;
+    }
 }

@@ -1,8 +1,13 @@
 <?php
-// Exit if accessed directly.
-defined('ABSPATH') || exit;
+/**
+ * Footer template for the theme
+ *
+ * @package cb-moto2024
+ */
 
-if (is_single()) {
+defined( 'ABSPATH' ) || exit;
+
+if ( is_single() ) {
     include get_stylesheet_directory() . '/page-templates/blocks/cb_related_posts.php';
 }
 ?>
@@ -13,7 +18,7 @@ if (is_single()) {
         <div class="row g-4 align-items-center pre-menu">
             <div class="col-lg-4 text-center">
                 Official website
-                <img src="<?=get_stylesheet_directory_uri()?>/img/c-rd-motorola@2x.png"
+                <img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/c-rd-motorola@2x.png' ); ?>"
                     class="footer__logo" alt="Motorola" width="150px" height="30px">
             </div>
             <div class="col-lg-4 text-center">
@@ -35,29 +40,29 @@ if (is_single()) {
         <div class="footer__menurow">
             <div>
                 <a href="https://www.motorola.co.uk/smartphones">Smartphones</a>
-                <?=wp_nav_menu(array('theme_location' => 'footer_menu1'))?>
+                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu1' ) ); ?> -->
             </div>
             <div>
                 <a href="https://www.motorola.co.uk/accessories">Accessories</a>
-                <?=wp_nav_menu(array('theme_location' => 'footer_menu2'))?>
+                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu2' ) ); ?> -->
             </div>
             <div>
                 <a href="https://motorola-global-en-uk.custhelp.com/">Support</a>
-                <?=wp_nav_menu(array('theme_location' => 'footer_menu3'))?>
+                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu3' ) ); ?> -->
             </div>
             <div>
                 <a href="https://www.motorola.co.uk/about">About us</a>
-                <?=wp_nav_menu(array('theme_location' => 'footer_menu4'))?>
+                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu4' ) ); ?> -->
             </div>
             <div class="text-center">
                 Safe website
-                <img src="<?=get_stylesheet_directory_uri()?>/img/secure-site.png" class="secure-site" width="29px" height="30px">
+                <img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/secure-site.png' ); ?>" class="secure-site" width="29px" height="30px">
             </div>
         </div>
     </div>
     <div class="colophon">
         <div class="container text-center py-2 fs-200">
-            <div class="my-1">&copy; <?=date('Y')?> Motorola Mobility LLC. All Rights Reserved.</div>
+            <div class="my-1">&copy; <?= esc_html( gmdate( 'Y' ) ); ?> Motorola Mobility LLC. All Rights Reserved.</div>
             <div class="my-1">MOTOROLA and the Stylized M Logo are registered trademarks of Motorola Trademark Holdings, LLC</div>
             <div class="my-1">All mobile phones are designed and manufactured by Motorola Mobility LLC, a wholly owned subsidiary of Lenovo.</div>
             <div class="my-1">Android, Google, Google Play, Nexus and other marks are trademarks of Google Inc. The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</div>

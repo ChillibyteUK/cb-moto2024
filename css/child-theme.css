@@ -21451,11 +21451,15 @@ section .section_title a::after {
   font-size: var(--fs-400);
   text-decoration: none;
 }
+.index_filters .category-item.active {
+  font-weight: bold !important;
+}
 .index_filters .category-item:not(:last-child)::after {
   content: "/";
   position: absolute;
   right: 0.5rem;
   color: var(--col-navy-blue);
+  font-weight: var(--fw-400) !important;
 }
 
 .latest {

@@ -66,6 +66,9 @@ section .section_title {
         padding-right: 2rem;
         font-size: var(--fs-400);
         text-decoration: none;
+        &.active {
+            font-weight: bold !important;
+        }
     }
     
     .category-item:not(:last-child)::after {
@@ -73,6 +76,7 @@ section .section_title {
         position: absolute;
         right: 0.5rem;
         color: var(--col-navy-blue);
+        font-weight: var(--fw-400) !important;
     }
 }
 

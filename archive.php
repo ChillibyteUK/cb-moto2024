@@ -1,32 +1,57 @@
 <?php
-// Exit if accessed directly.
-defined('ABSPATH') || exit;
+/**
+ * The template for displaying archive pages.
+ *
+ * @package cb-moto2024
+ */
 
-$page_for_posts = get_option('page_for_posts');
+defined( 'ABSPATH' ) || exit;
 
-$img = wp_get_attachment_image_url(get_field('blog_index_hero_image', 'options'), 'full');
+$page_for_posts = get_option( 'page_for_posts' );
+
+$img = wp_get_attachment_image_url( get_field( 'blog_index_hero_image', 'options' ), 'full' );
 
 get_header();
 $queried_object = get_queried_object();
-if (! empty($queried_object) && isset($queried_object->slug)) {
+if ( ! empty( $queried_object ) && isset( $queried_object->slug ) ) {
     $category_slug = $queried_object->slug;
 }
 ?>
-<main id="main" class="archive <?= $category_slug ?>">
-    <section class="index_hero index_hero--short"
-        style="background-image: url(<?= $img ?>)">
-        <h1 class="mb-3">Motoverse Blog</h1>
-        <div class="text-center"><?= single_cat_title() ?></div>
-    </section>
-    <section class="index_filters">
-        <div class="category-list">
-            <a class="category-item" href="/">All</a>
-            <a class="category-item" href="/category/technology/">Technology</a>
-            <a class="category-item" href="/category/hardware/">Hardware</a>
-            <a class="category-item" href="/category/device-care/">Device Care</a>
-            <a class="category-item" href="/category/news/">News</a>
-        </div>
-    </section>
+<section class="prenav">
+	<div class="container text-center py-5">
+		<?= wp_get_attachment_image( get_field( 'blog_index_hero_image', 'option' ), 'full', false, array( 'class' => 'img-fluid' ) ); ?>
+	</div>
+</section>
+<nav id="blognav">
+	<div class="container d-flex justify-content-between align-items-center flex-wrap gap-4">
+		<div class="logo">
+			<a href="/" class="navbar-brand logo-full" rel="home"><img src="<?= esc_url( get_stylesheet_directory_uri() ); ?>/img/c-rd-motorola@2x.png" width=118.5 height=24 alt="Motorola logo"></a>
+		</div>
+		<section class="index_filters">
+			<div class="category-list">
+				<a class="category-item" href="/">All</a>
+				<?php
+				$categories = get_categories(
+					array(
+						'hide_empty' => true,
+					)
+				);
+				foreach ( $categories as $category ) {
+					if ( 'uncategorized' === strtolower( $category->slug ) ) {
+						continue;
+					}
+                    printf(
+                        '<a class="category-item" href="%s">%s</a>',
+                        esc_url( get_category_link( $category->term_id ) ),
+                        esc_html( $category->name )
+                    );
+				}
+				?>
+			</div>
+		</section>
+	</div>
+</nav>
+<main id="main" class="archive <?= esc_attr( $category_slug ); ?>">
     <section class="latest pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">

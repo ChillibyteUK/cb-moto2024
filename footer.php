@@ -37,28 +37,6 @@ if ( is_single() ) {
                 </div>
             </div>
         </div>
-        <div class="footer__menurow">
-            <div>
-                <a href="https://www.motorola.co.uk/smartphones">Smartphones</a>
-                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu1' ) ); ?> -->
-            </div>
-            <div>
-                <a href="https://www.motorola.co.uk/accessories">Accessories</a>
-                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu2' ) ); ?> -->
-            </div>
-            <div>
-                <a href="https://motorola-global-en-uk.custhelp.com/">Support</a>
-                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu3' ) ); ?> -->
-            </div>
-            <div>
-                <a href="https://www.motorola.co.uk/about">About us</a>
-                <!-- <?= wp_nav_menu( array( 'theme_location' => 'footer_menu4' ) ); ?> -->
-            </div>
-            <div class="text-center">
-                Safe website
-                <img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/secure-site.png' ); ?>" class="secure-site" width="29px" height="30px">
-            </div>
-        </div>
     </div>
     <div class="colophon">
         <div class="container text-center py-2 fs-200">

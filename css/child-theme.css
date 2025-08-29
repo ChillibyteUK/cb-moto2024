@@ -22087,12 +22087,17 @@ a.noline {
 a.anchor {
   display: block !important;
   position: relative;
-  top: calc(var(--h-top) * -1);
+  top: calc(var(--h-top) * -1 - 80px);
   visibility: hidden;
   line-height: 0;
   height: 0;
   margin: 0;
   padding: 0;
+}
+@media (min-width: 992px) {
+  a.anchor {
+    top: calc(var(--h-top) * -1);
+  }
 }
 
 @media (min-width: 992px) {

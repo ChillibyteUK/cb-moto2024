@@ -1,85 +1,103 @@
 <?php
-// Exit if accessed directly.
-defined('ABSPATH') || exit;
+/**
+ * File: cb-theme.php
+ *
+ * Theme initialization and customization functions for cb-moto2024.
+ *
+ * @package cb-moto2024
+ */
 
-// require_once CB_THEME_DIR . '/inc/cb-posttypes.php';
-// require_once CB_THEME_DIR . '/inc/cb-taxonomies.php';
+defined( 'ABSPATH' ) || exit;
+
 require_once CB_THEME_DIR . '/inc/cb-utility.php';
 require_once CB_THEME_DIR . '/inc/cb-blocks.php';
 require_once CB_THEME_DIR . '/inc/cb-news.php';
-// require_once CB_THEME_DIR . '/inc/cb-careers.php';
+
+// Remove unwanted SVG filter injection WP.
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
 
-// Remove unwanted SVG filter injection WP
-remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
-remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
-
-
-// Remove comment-reply.min.js from footer
-function remove_comment_reply_header_hook()
-{
-    wp_deregister_script('comment-reply');
+/**
+ * Removes the comment-reply script from the header.
+ */
+function remove_comment_reply_header_hook() {
+    wp_deregister_script( 'comment-reply' );
 }
-add_action('init', 'remove_comment_reply_header_hook');
+add_action( 'init', 'remove_comment_reply_header_hook' );
 
-add_action('admin_menu', 'remove_comments_menu');
-function remove_comments_menu()
-{
-    remove_menu_page('edit-comments.php');
+/**
+ * Removes the comments menu from the WordPress admin dashboard.
+ */
+function remove_comments_menu() {
+    remove_menu_page( 'edit-comments.php' );
 }
+add_action( 'admin_menu', 'remove_comments_menu' );
 
-add_filter('theme_page_templates', 'child_theme_remove_page_template');
-function child_theme_remove_page_template($page_templates)
-{
-    // unset($page_templates['page-templates/blank.php'],$page_templates['page-templates/empty.php'], $page_templates['page-templates/fullwidthpage.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
-    unset($page_templates['page-templates/blank.php'],$page_templates['page-templates/empty.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php']);
+/**
+ * Removes specific page templates from the available templates list.
+ *
+ * @param array $page_templates Array of available page templates.
+ * @return array Modified array of page templates.
+ */
+function child_theme_remove_page_template( $page_templates ) {
+    unset( $page_templates['page-templates/blank.php'], $page_templates['page-templates/empty.php'], $page_templates['page-templates/left-sidebarpage.php'], $page_templates['page-templates/right-sidebarpage.php'], $page_templates['page-templates/both-sidebarspage.php'] );
     return $page_templates;
 }
-add_action('after_setup_theme', 'remove_understrap_post_formats', 11);
-function remove_understrap_post_formats()
-{
-    remove_theme_support('post-formats', array( 'aside', 'image', 'video' , 'quote' , 'link' ));
-}
+add_filter( 'theme_page_templates', 'child_theme_remove_page_template' );
 
-if (function_exists('acf_add_options_page')) {
+/**
+ * Removes support for specific post formats from the theme.
+ */
+function remove_understrap_post_formats() {
+    remove_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+}
+add_action( 'after_setup_theme', 'remove_understrap_post_formats', 11 );
+
+if ( function_exists( 'acf_add_options_page' ) ) {
     acf_add_options_page(
         array(
-            'page_title' 	=> 'Site-Wide Settings',
-            'menu_title'	=> 'Site-Wide Settings',
-            'menu_slug' 	=> 'theme-general-settings',
-            'capability'	=> 'edit_posts',
+            'page_title' => 'Site-Wide Settings',
+            'menu_title' => 'Site-Wide Settings',
+            'menu_slug'  => 'theme-general-settings',
+            'capability' => 'edit_posts',
         )
     );
 }
 
-function widgets_init()
-{
+/**
+ * Initializes theme widgets, registers sidebars and navigation menus,
+ * unregisters unused sidebars and menus, and sets editor color palette.
+ */
+function widgets_init() {
     register_sidebar(
         array(
-            'name'          => __('Footer Col 1', 'cb-moto2024'),
+            'name'          => __( 'Footer Col 1', 'cb-moto2024' ),
             'id'            => 'footer-1',
-            'description'   => __('Footer Col 1', 'cb-moto2024'),
+            'description'   => __( 'Footer Col 1', 'cb-moto2024' ),
             'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
             'after_widget'  => '</div>',
         )
     );
 
-    register_nav_menus(array(
-        'primary_nav' => __('Primary Nav', 'cb-moto2024'),
-        'footer_menu1' => __('Footer Menu 1', 'cb-moto2024'),
-        'footer_menu2' => __('Footer Menu 2', 'cb-moto2024'),
-        'footer_menu3' => __('Footer Menu 3', 'cb-moto2024'),
-    ));
+    register_nav_menus(
+		array(
+			'primary_nav'  => __( 'Primary Nav', 'cb-moto2024' ),
+			'footer_menu1' => __( 'Footer Menu 1', 'cb-moto2024' ),
+			'footer_menu2' => __( 'Footer Menu 2', 'cb-moto2024' ),
+			'footer_menu3' => __( 'Footer Menu 3', 'cb-moto2024' ),
+		)
+	);
 
-    unregister_sidebar('hero');
-    unregister_sidebar('herocanvas');
-    unregister_sidebar('statichero');
-    unregister_sidebar('left-sidebar');
-    unregister_sidebar('right-sidebar');
-    unregister_sidebar('footerfull');
-    unregister_nav_menu('primary');
+    unregister_sidebar( 'hero' );
+    unregister_sidebar( 'herocanvas' );
+    unregister_sidebar( 'statichero' );
+    unregister_sidebar( 'left-sidebar' );
+    unregister_sidebar( 'right-sidebar' );
+    unregister_sidebar( 'footerfull' );
+    unregister_nav_menu( 'primary' );
 
-    add_theme_support('disable-custom-colors');
+    add_theme_support( 'disable-custom-colors' );
     add_theme_support(
         'editor-color-palette',
         array(
@@ -111,29 +129,34 @@ function widgets_init()
         )
     );
 }
-add_action('widgets_init', 'widgets_init', 11);
+add_action( 'widgets_init', 'widgets_init', 11 );
 
 
-remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
-remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
-//Custom Dashboard Widget
-add_action('wp_dashboard_setup', 'register_cb_dashboard_widget');
-function register_cb_dashboard_widget()
-{
+/**
+ * Registers a custom dashboard widget for Chillibyte.
+ */
+function register_cb_dashboard_widget() {
     wp_add_dashboard_widget(
         'cb_dashboard_widget',
         'Chillibyte',
         'cb_dashboard_widget_display'
     );
 }
+add_action( 'wp_dashboard_setup', 'register_cb_dashboard_widget' );
 
-function cb_dashboard_widget_display()
-{
+/**
+ * Displays the Chillibyte dashboard widget content.
+ *
+ * @return void
+ */
+function cb_dashboard_widget_display() {
     ?>
 <div style="display: flex; align-items: center; justify-content: space-around;">
     <img style="width: 50%;"
-        src="<?= get_stylesheet_directory_uri().'/img/cb-full.jpg'; ?>">
+        src="<?= esc_url( get_stylesheet_directory_uri() . '/img/cb-full.jpg' ); ?>">
     <a class="button button-primary" target="_blank" rel="noopener nofollow noreferrer"
         href="mailto:hello@www.chillibyte.co.uk/">Contact</a>
 </div>
@@ -143,211 +166,152 @@ function cb_dashboard_widget_display()
     <p>Got a problem with your site, or want to make some changes & need us to take a look for you?</p>
     <p>Use the link above to get in touch and we'll get back to you ASAP.</p>
 </div>
-<?php
+    <?php
 }
 
 
-add_filter(
-    'wpseo_breadcrumb_links',
-    function ($links) {
-        global $post;
-        // if ( is_singular( 'post' ) ) {
-        //     $t = get_the_category($post->ID);
-        //     $breadcrumb[] = array(
-        //         'url' => '/guides/',
-        //         'text' => 'Guides',
-        //     );
-
-        //     array_splice( $links, 1, -2, $breadcrumb );
-        // }
-        return $links;
-    }
-);
-
-// remove discussion metabox
-function cc_gutenberg_register_files()
-{
-    // script file
+/**
+ * Registers custom block editor scripts and block types for Gutenberg.
+ */
+function cc_gutenberg_register_files() {
+    // script file.
     wp_register_script(
         'cc-block-script',
-        get_stylesheet_directory_uri() .'/js/block-script.js', // adjust the path to the JS file
-        array( 'wp-blocks', 'wp-edit-post' )
+        get_stylesheet_directory_uri() . '/js/block-script.js', // adjust the path to the JS file.
+        array( 'wp-blocks', 'wp-edit-post' ),
+        wp_get_theme()->get( 'Version' ),
+        true
     );
-    // register block editor script
-    register_block_type('cc/ma-block-files', array(
-        'editor_script' => 'cc-block-script'
-    ));
+    // register block editor script.
+    register_block_type(
+        'cc/ma-block-files',
+        array(
+            'editor_script' => 'cc-block-script',
+        )
+    );
 }
-add_action('init', 'cc_gutenberg_register_files');
+add_action( 'init', 'cc_gutenberg_register_files' );
 
-function understrap_all_excerpts_get_more_link($post_excerpt)
-{
-    if (is_admin() || ! get_the_ID()) {
+/**
+ * Returns the post excerpt, optionally modifying it for non-admin views.
+ *
+ * @param string $post_excerpt The post excerpt.
+ * @return string The (possibly modified) post excerpt.
+ */
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+    if ( is_admin() || ! get_the_ID() ) {
         return $post_excerpt;
     }
     return $post_excerpt;
 }
 
-//* Remove Yoast SEO breadcrumbs from Revelanssi's search results
-add_filter('the_content', 'wpdocs_remove_shortcode_from_index');
-function wpdocs_remove_shortcode_from_index($content)
-{
-    if (is_search()) {
-        $content = strip_shortcodes($content);
-    }
-    return $content;
-}
-
-// GF really is pants.
 /**
  * Change submit from input to button
  *
  * Do not use example provided by Gravity Forms as it strips out the button attributes including onClick
+ *
+ * @param string $button_input The original HTML input element for the submit button.
+ * @param array  $form The Gravity Forms form array.
  */
-function wd_gf_update_submit_button($button_input, $form)
-{
-    //save attribute string to $button_match[1]
-    preg_match("/<input([^\/>]*)(\s\/)*>/", $button_input, $button_match);
+function wd_gf_update_submit_button( $button_input, $form ) {
+    // save attribute string to $button_match[1].
+    preg_match( '/<input([^\/>]*)(\s\/)*>/', $button_input, $button_match );
 
-    //remove value attribute (since we aren't using an input)
-    $button_atts = str_replace("value='" . $form['button']['text'] . "' ", "", $button_match[1]);
+    // remove value attribute (since we aren't using an input).
+    $button_atts = str_replace( 'value=' . $form['button']['text'] . "' ", '', $button_match[1] );
 
-    // create the button element with the button text inside the button element instead of set as the value
+    // create the button element with the button text inside the button element instead of set as the value.
     return '<button ' . $button_atts . '><span>' . $form['button']['text'] . '</span></button>';
 }
-add_filter('gform_submit_button', 'wd_gf_update_submit_button', 10, 2);
+add_filter( 'gform_submit_button', 'wd_gf_update_submit_button', 10, 2 );
 
 
-function cb_theme_enqueue()
-{
+/**
+ * Enqueues theme scripts and styles, sets up theme text domain, and deregisters jQuery.
+ *
+ * @return void
+ */
+function cb_theme_enqueue() {
     $the_theme = wp_get_theme();
-    // wp_enqueue_style('lightbox-stylesheet', get_stylesheet_directory_uri() . '/css/lightbox.min.css', array(), $the_theme->get('Version'));
-    // wp_enqueue_script('lightbox-scripts', get_stylesheet_directory_uri() . '/js/lightbox-plus-jquery.min.js', array(), $the_theme->get('Version'), true);
-    // wp_enqueue_script('lightbox-scripts', get_stylesheet_directory_uri() . '/js/lightbox.min.js', array(), $the_theme->get('Version'), true);
-    // wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), null, true);
 
-    wp_deregister_script('jquery');
-    // wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), null, true);
+    load_theme_textdomain( 'cb-moto2024', get_template_directory() . '/languages' );
 
-    // wp_enqueue_style('slick-styles', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css', array(), true);
-    // wp_enqueue_style('slick-theme-styles', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css', array(), null, true);
-    // wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array(), null, true);
-
-    // wp_enqueue_style('aos-style', "https://unpkg.com/aos@2.3.1/dist/aos.css", array());
-    // wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
+    wp_deregister_script( 'jquery' );
 }
-add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
+add_action( 'wp_enqueue_scripts', 'cb_theme_enqueue' );
 
-// hide sticky option
-function hide_sticky_option_css()
-{
-    $screen = get_current_screen();
-    // Check if we're on the post edit screen
-    if ($screen->id == 'post') {
-        echo '<style>
-            .css-qy3gpb { display: none !important; }
-        </style>';
-    }
-}
-// add_action('admin_head', 'hide_sticky_option_css');
 
-// add sticky to admin column
-function add_is_sticky_column_in_specific_position($columns)
-{
-    $new_columns = [];
-    foreach ($columns as $key => $title) {
-        // Add all columns up to (but not including) the 'date' column
-        if ($key === 'date') {
-            // Insert the 'is_sticky' column before the 'date' column
+/**
+ * Adds a 'Featured' column to the admin posts list before the 'date' column.
+ *
+ * @param array $columns Existing columns in the posts list.
+ * @return array Modified columns with 'is_sticky' added.
+ */
+function add_is_sticky_column_in_specific_position( $columns ) {
+    $new_columns = array();
+    foreach ( $columns as $key => $title ) {
+        // Add all columns up to (but not including) the 'date' column.
+        if ( 'date' === $key ) {
+            // Insert the 'is_sticky' column before the 'date' column.
             $new_columns['is_sticky'] = 'Featured';
         }
-        // Add the current column to the new columns array
+        // Add the current column to the new columns array.
         $new_columns[ $key ] = $title;
     }
     return $new_columns;
 }
-add_filter('manage_posts_columns', 'add_is_sticky_column_in_specific_position');
+add_filter( 'manage_posts_columns', 'add_is_sticky_column_in_specific_position' );
 
-function make_is_sticky_column_sortable($columns)
-{
+/**
+ * Makes the 'is_sticky' column sortable in the admin posts list.
+ *
+ * @param array $columns Existing sortable columns.
+ * @return array Modified sortable columns with 'is_sticky' added.
+ */
+function make_is_sticky_column_sortable( $columns ) {
     $columns['is_sticky'] = 'is_sticky'; // The value 'is_sticky' identifies the column.
     return $columns;
 }
-add_filter('manage_edit-post_sortable_columns', 'make_is_sticky_column_sortable');
+add_filter( 'manage_edit-post_sortable_columns', 'make_is_sticky_column_sortable' );
 
-function populate_is_sticky_column_in_posts($column, $post_id)
-{
-    if ($column == 'is_sticky') {
-        // Get the value of the 'is_sticky' field from the current post
-        $is_sticky = get_field('is_sticky', $post_id);
+/**
+ * Populates the 'is_sticky' column in the admin posts list with 'Yes' or 'No' based on the post's 'is_sticky' field.
+ *
+ * @param string $column  The name of the column being displayed.
+ * @param int    $post_id The ID of the current post.
+ */
+function populate_is_sticky_column_in_posts( $column, $post_id ) {
+    if ( 'is_sticky' === $column ) {
+        // Get the value of the 'is_sticky' field from the current post.
+        $is_sticky = get_field( 'is_sticky', $post_id );
 
-        // Check if 'is_sticky' field is true and display accordingly
-        if ($is_sticky) {
-            echo 'Yes'; // Adjust as needed
+        // Check if 'is_sticky' field is true and display accordingly.
+        if ( $is_sticky ) {
+            echo 'Yes'; // Adjust as needed.
         } else {
-            echo 'No'; // Adjust as needed
+            echo 'No'; // Adjust as needed.
         }
     }
 }
-add_action('manage_posts_custom_column', 'populate_is_sticky_column_in_posts', 10, 2);
+add_action( 'manage_posts_custom_column', 'populate_is_sticky_column_in_posts', 10, 2 );
 
-function sort_posts_by_is_sticky($query)
-{
-    if(! is_admin()) {
+/**
+ * Sorts posts in the admin list by the 'is_sticky' custom field when the column is selected for sorting.
+ *
+ * @param WP_Query $query The WP_Query instance (passed by reference).
+ * @return void
+ */
+function sort_posts_by_is_sticky( $query ) {
+    if ( ! is_admin() || ! $query->is_main_query() ) {
         return;
     }
 
-    $orderby = $query->get('orderby');
+    $orderby = $query->get( 'orderby' );
 
-    if('is_sticky' == $orderby) {
-        $query->set('meta_key', 'is_sticky');
-        $query->set('orderby', 'meta_value_num'); // Use 'meta_value_num' for numeric sorting
-        $query->set('order', 'DESC'); // Use 'ASC' if you want the false/0 values first
+    if ( 'is_sticky' === $orderby ) {
+        $query->set( 'meta_key', 'is_sticky' );
+        $query->set( 'orderby', 'meta_value_num' ); // Use 'meta_value_num' for numeric sorting.
+        $query->set( 'order', 'DESC' ); // Use 'ASC' if you want the false/0 values first.
     }
 }
-add_action('pre_get_posts', 'sort_posts_by_is_sticky');
-
-// black thumbnails - fix alpha channel
-/**
- * Patch to prevent black PDF backgrounds.
- *
- * https://core.trac.wordpress.org/ticket/45982
- */
-// require_once ABSPATH . 'wp-includes/class-wp-image-editor.php';
-// require_once ABSPATH . 'wp-includes/class-wp-image-editor-imagick.php';
-
-// // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace
-// final class ExtendedWpImageEditorImagick extends WP_Image_Editor_Imagick
-// {
-//     /**
-//      * Add properties to the image produced by Ghostscript to prevent black PDF backgrounds.
-//      *
-//      * @return true|WP_error
-//      */
-//     // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
-//     protected function pdf_load_source()
-//     {
-//         $loaded = parent::pdf_load_source();
-
-//         try {
-//             $this->image->setImageAlphaChannel(Imagick::ALPHACHANNEL_REMOVE);
-//             $this->image->setBackgroundColor('#ffffff');
-//         } catch (Exception $exception) {
-//             error_log($exception->getMessage());
-//         }
-
-//         return $loaded;
-//     }
-// }
-
-// /**
-//  * Filters the list of image editing library classes to prevent black PDF backgrounds.
-//  *
-//  * @param array $editors
-//  * @return array
-//  */
-// add_filter('wp_image_editors', function (array $editors): array {
-//     array_unshift($editors, ExtendedWpImageEditorImagick::class);
-
-//     return $editors;
-// });?>
+add_action( 'pre_get_posts', 'sort_posts_by_is_sticky' );

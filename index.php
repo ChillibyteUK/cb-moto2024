@@ -23,7 +23,7 @@ get_header();
 		</div>
 		<section class="index_filters">
 			<div class="category-list">
-				<a class="category-item" href="#all">All</a>
+				<a class="category-item" href="#all"><?= esc_html( __( 'All', 'cb-moto2024' ) ); ?></a>
 				<?php
 				$categories = get_categories(
 					array(
@@ -76,12 +76,14 @@ get_header();
 								<?php
 								if ( $first_class ) {
 									global $post;
-									$old_post    = $post;
+									$old_post = $post;
+									// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 									$post        = get_post( $p );
 									$raw_content = apply_filters( 'the_content', $post->post_content );
 									$raw_content = preg_replace( '/<h1[^>]*>.*?<\/h1>/is', '', $raw_content, 1 );
-									$post        = $old_post;
-									$excerpt     = wp_trim_words( wp_strip_all_tags( $raw_content ), 50 );
+									// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+									$post    = $old_post;
+									$excerpt = wp_trim_words( wp_strip_all_tags( $raw_content ), 50 );
 									?>
 									<div class="card__excerpt"><?= esc_html( $excerpt ); ?></div>
 									<?php
@@ -203,10 +205,9 @@ get_header();
     <section class="technology pb-5 mb-5">
         <div class="container">
             <div class="section_title">
-                <h2 class="fs-800">Technology</h2>
+                <h2 class="fs-800"><?= esc_html( __( 'Technology', 'cb-moto2024' ) ); ?></h2>
                 <a
-                    href="<?= esc_url( get_term_link( 'technology', 'category' ) ); ?>">View
-                    all</a>
+                    href="<?= esc_url( get_term_link( 'technology', 'category' ) ); ?>"><?= esc_html( __( 'View all', 'cb-moto2024' ) ); ?></a>
             </div>
             <div class="grid_4_1">
                 <?php
@@ -303,8 +304,8 @@ get_header();
     <section class="hardware pb-5 mb-5">
         <div class="container">
             <div class="section_title">
-                <h2 class="fs-800">Hardware</h2>
-                <a href="<?= esc_url( get_term_link( 'hardware', 'category' ) ); ?>">View all</a>
+                <h2 class="fs-800"><?= esc_html( __( 'Hardware', 'cb-moto2024' ) ); ?></h2>
+                <a href="<?= esc_url( get_term_link( 'hardware', 'category' ) ); ?>"><?= esc_html( __( 'View all', 'cb-moto2024' ) ); ?></a>
             </div>
             <div class="grid_2_3">
                 <?php
@@ -401,8 +402,8 @@ get_header();
     <section class="device-care pb-5 mb-5">
         <div class="container">
             <div class="section_title">
-                <h2 class="fs-800">Device Care</h2>
-                <a href="<?= esc_url( get_term_link( 'device-care', 'category' ) ); ?>">View all</a>
+                <h2 class="fs-800"><?= esc_html( __( 'Device Care', 'cb-moto2024' ) ); ?></h2>
+                <a href="<?= esc_url( get_term_link( 'device-care', 'category' ) ); ?>"><?= esc_html( __( 'View all', 'cb-moto2024' ) ); ?></a>
             </div>
             <div class="grid_3_2">
                 <?php
@@ -486,8 +487,8 @@ get_header();
     <section class="news pb-5 mb-5">
         <div class="container">
             <div class="section_title">
-                <h2 class="fs-800">News</h2>
-                <a href="<?= esc_url( get_term_link( 'news', 'category' ) ); ?>">View all</a>
+                <h2 class="fs-800"><?= esc_html( __( 'News', 'cb-moto2024' ) ); ?></h2>
+                <a href="<?= esc_url( get_term_link( 'news', 'category' ) ); ?>"><?= esc_html( __( 'View all', 'cb-moto2024' ) ); ?></a>
             </div>
             <div class="latest_grid grid_3_3">
                 <?php

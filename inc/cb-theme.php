@@ -234,7 +234,7 @@ add_filter( 'gform_submit_button', 'wd_gf_update_submit_button', 10, 2 );
 function cb_theme_enqueue() {
     $the_theme = wp_get_theme();
 
-    load_theme_textdomain( 'cb-moto2024', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'cb-moto2024', get_stylesheet_directory() . '/languages' );
 
     wp_deregister_script( 'jquery' );
 }

@@ -10,9 +10,6 @@ defined( 'ABSPATH' ) || exit;
 $page_for_posts = get_option( 'page_for_posts' );
 
 get_header();
-
-var_dump( is_textdomain_loaded( 'cb-moto2024' ) );
-var_dump( get_locale() );
 ?>
 <section class="prenav">
 	<div class="container text-center py-5">
@@ -37,10 +34,28 @@ var_dump( get_locale() );
 					if ( 'uncategorized' === strtolower( $category->slug ) ) {
 						continue;
 					}
+
+					// Translate category names.
+					$translated_name = $category->name;
+					switch ( $category->name ) {
+						case 'Technology':
+							$translated_name = __( 'Technology', 'cb-moto2024' );
+							break;
+						case 'Hardware':
+							$translated_name = __( 'Hardware', 'cb-moto2024' );
+							break;
+						case 'Device Care':
+							$translated_name = __( 'Device Care', 'cb-moto2024' );
+							break;
+						case 'News':
+							$translated_name = __( 'News', 'cb-moto2024' );
+							break;
+					}
+
 					printf(
 						'<a class="category-item" href="#%s">%s</a>',
 						esc_attr( $category->slug ),
-						esc_html( $category->name )
+						esc_html( $translated_name )
 					);
 				}
 				?>

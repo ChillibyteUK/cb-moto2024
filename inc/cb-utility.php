@@ -1,19 +1,25 @@
 <?php
+/**
+ * Custom utility functions
+ *
+ * @package cb-moto2024
+ */
 
-function parse_phone($phone)
-{
-    $phone = preg_replace('/\s+/', '', $phone);
-    $phone = preg_replace('/\(0\)/', '', $phone);
-    $phone = preg_replace('/[\(\)\.]/', '', $phone);
-    $phone = preg_replace('/-/', '', $phone);
-    $phone = preg_replace('/^0/', '+44', $phone);
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Parses and formats a phone number by removing spaces, special characters, and replacing leading zero with +44.
+ *
+ * @param string $phone The phone number to be parsed.
+ * @return string The formatted phone number.
+ */
+function parse_phone( $phone ) {
+    $phone = preg_replace( '/\s+/', '', $phone );
+    $phone = preg_replace( '/\(0\)/', '', $phone );
+    $phone = preg_replace( '/[\(\)\.]/', '', $phone );
+    $phone = preg_replace( '/-/', '', $phone );
+    $phone = preg_replace( '/^0/', '+44', $phone );
     return $phone;
-}
-
-function split_lines($content)
-{
-    $content = preg_replace('/<br \/>/', '<br>&nbsp;<br>', $content);
-    return $content;
 }
 
 add_shortcode('contact_address', function () {
@@ -369,7 +375,7 @@ function estimate_reading_time_in_minutes($content = '', $words_per_minute = 300
     $minutes = ceil($words_count / $words_per_minute);
     
     if ($formatted) {
-        $minutes =  $minutes . ' min read';
+        $minutes =  $minutes . ' ' . __('min read', 'cb-moto2024');
     }
 
     return $minutes;

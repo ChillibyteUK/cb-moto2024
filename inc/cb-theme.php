@@ -238,16 +238,32 @@ function cb_theme_enqueue() {
 }
 add_action( 'wp_enqueue_scripts', 'cb_theme_enqueue' );
 
+
 /**
- * Sets up theme features, including loading the text domain for translations.
- *
- * @return void
+ * Load text domain for translations.
  */
-function cb_theme_setup() {
-    // Load text domain.
-    load_theme_textdomain( 'cb-moto2024', get_stylesheet_directory() . '/languages' );
+function cb_theme_load_textdomain() {
+    // Unload any existing text domain first.
+    unload_textdomain( 'cb-moto2024' );
+
+    // Try multiple possible locations for the translation file.
+    $paths = array(
+        get_stylesheet_directory() . '/languages',
+        get_template_directory() . '/languages',
+        WP_LANG_DIR . '/themes',
+    );
+
+    foreach ( $paths as $path ) {
+        $mofile = $path . '/cb-moto2024-' . get_locale() . '.mo';
+        if ( file_exists( $mofile ) ) {
+            $result = load_textdomain( 'cb-moto2024', $mofile );
+            if ( $result ) {
+                break;
+            }
+        }
+    }
 }
-add_action( 'after_setup_theme', 'cb_theme_setup' );
+add_action( 'init', 'cb_theme_load_textdomain' );
 
 /**
  * Adds a 'Featured' column to the admin posts list before the 'date' column.

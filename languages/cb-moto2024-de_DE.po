@@ -30,3 +30,51 @@ msgstr "Gerätepflege"
 #: theme
 msgid "News"
 msgstr "Nachrichten"
+
+#: theme
+msgid "min read"
+msgstr "Min. Lesezeit"
+
+#: theme
+msgid "Back"
+msgstr "Zurück"
+
+#: theme
+msgid "Categories"
+msgstr "Kategorien"
+
+#: theme
+msgid "From our blog"
+msgstr "Aus unserem Blog"
+
+#: theme
+msgid "Continue Reading"
+msgstr "Weiterlesen"
+
+#: theme
+msgid "Official website"
+msgstr "Offizielle Website"
+
+#: theme
+msgid "Follow us on social media"
+msgstr "Folge uns in den sozialen Medien"
+
+#: theme
+msgid "Change location"
+msgstr "Standort ändern"
+
+#: theme
+msgid "All Rights Reserved."
+msgstr "Alle Rechte vorbehalten."
+
+#: theme
+msgid "MOTOROLA and the Stylized M Logo are registered trademarks of Motorola Trademark Holdings, LLC"
+msgstr "MOTOROLA und das stilisierte M-Logo sind eingetragene Marken von Motorola Trademark Holdings, LLC."
+
+#: theme
+msgid "All mobile phones are designed and manufactured by Motorola Mobility LLC, a wholly owned subsidiary of Lenovo."
+msgstr "Alle Mobiltelefone werden von Motorola Mobility LLC entworfen und hergestellt, einer hundertprozentigen Tochtergesellschaft von Lenovo."
+
+#: theme
+msgid "Android, Google, Google Play, Nexus and other marks are trademarks of Google Inc. The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License."
+msgstr "Android, Google, Google Play, Nexus und andere Marken sind Marken von Google Inc. Der Android-Roboter ist eine Reproduktion oder Abwandlung einer von Google erstellten und geteilten Arbeit und wird gemäß den in der Creative Commons 3.0 Attribution License beschriebenen Bedingungen verwendet."

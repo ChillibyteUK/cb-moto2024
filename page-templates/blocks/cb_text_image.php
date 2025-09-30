@@ -1,32 +1,42 @@
 <?php
-$bg = get_field('colour') ?? null;
+/**
+ * Text and Image Block Template
+ *
+ * Displays a block with text and image, supporting custom order, alignment, and padding.
+ *
+ * @package cb-moto2024
+ */
 
-$image_order = get_field('order') == 'Image/Text' ? '' : 'order-md-2';
-$text_order = get_field('order') == 'Image/Text' ? '' : 'order-md-1';
-$text_alignment = get_field('order') == 'Image/Text' ? 'text--right px-3' : 'text--left px-3';
+defined( 'ABSPATH' ) || exit;
 
-$img = wp_get_attachment_image_url(get_field('image'), 'full') ?: get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
+$bg = get_field( 'colour' ) ?? null;
 
-$padding = get_field('padding');
-if (!is_array($padding)) {
-    $padding = [];  // Assign an empty array if not an array
+$image_order    = 'Image/Text' === get_field( 'order' ) ? '' : 'order-md-2';
+$text_order     = 'Image/Text' === get_field( 'order' ) ? '' : 'order-md-1';
+$text_alignment = 'Image/Text' === get_field( 'order' ) ? 'text--right px-3' : 'text--left px-3';
+
+$img = wp_get_attachment_image_url( get_field( 'image' ), 'full' ) ? wp_get_attachment_image_url( get_field( 'image' ), 'full' ) : get_stylesheet_directory_uri() . '/img/placeholder-800x450.png';
+
+$padding = get_field( 'padding' );
+if ( ! is_array( $padding ) ) {
+    $padding = array();  // Assign an empty array if not an array.
 }
-$pt = in_array("top", $padding) ? 'pt-5' : null;
-$pb = in_array("bottom", $padding) ? 'pb-5' : null;
+$pt = in_array( 'top', $padding, true ) ? 'pt-5' : null;
+$pb = in_array( 'bottom', $padding, true ) ? 'pb-5' : null;
 ?>
-<section class="text_image <?=$bg?>">
+<section class="text_image <?= esc_attr( $bg ); ?>">
     <div class="container-fluid">
         <div class="row gx-5" style="min-height:400px">
-            <div class="col-md-6 text_image__image <?=$image_order?>"
-                style="background-image:url(<?=$img?>)">
+            <div class="col-md-6 text_image__image <?= esc_attr( $image_order ); ?>"
+                style="background-image:url(<?= esc_url( $img ); ?>)">
             </div>
             <div
-                class="col-md-6 <?=$text_order?> <?=$pt?> <?=$pb?>">
-                <div class="ps-xl-3 <?=$text_alignment?>">
+                class="col-md-6 <?= esc_attr( $text_order ); ?> <?= esc_attr( $pt ); ?> <?= esc_attr( $pb ); ?>">
+                <div class="ps-xl-3 <?= esc_attr( $text_alignment ); ?>">
                     <h2 class="mb-4">
-                        <?=get_field('title')?>
+                        <?= esc_html( get_field( 'title' ) ); ?>
                     </h2>
-                    <?=get_field('content')?>
+                    <?= wp_kses_post( get_field( 'content' ) ); ?>
                 </div>
             </div>
         </div>

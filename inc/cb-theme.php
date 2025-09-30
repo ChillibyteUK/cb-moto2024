@@ -234,12 +234,20 @@ add_filter( 'gform_submit_button', 'wd_gf_update_submit_button', 10, 2 );
 function cb_theme_enqueue() {
     $the_theme = wp_get_theme();
 
-    load_theme_textdomain( 'cb-moto2024', get_stylesheet_directory() . '/languages' );
-
     wp_deregister_script( 'jquery' );
 }
 add_action( 'wp_enqueue_scripts', 'cb_theme_enqueue' );
 
+/**
+ * Sets up theme features, including loading the text domain for translations.
+ *
+ * @return void
+ */
+function cb_theme_setup() {
+    // Load text domain.
+    load_theme_textdomain( 'cb-moto2024', get_stylesheet_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'cb_theme_setup' );
 
 /**
  * Adds a 'Featured' column to the admin posts list before the 'date' column.

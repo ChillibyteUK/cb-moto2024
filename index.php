@@ -152,7 +152,25 @@ get_header();
                                 <img class="card__image" src="<?= esc_url( $ph ); ?>">
                                 <div class="card__inner">
                                     <div class="card__category cat--<?= esc_attr( $post_cat[0]->slug ); ?>">
-                                        <?= esc_html( $post_cat[0]->name ); ?>
+										<?php
+										// Translate category names.
+										$translated = $post_cat[0]->name;
+										switch ( $post_cat[0]->name ) {
+											case 'Technology':
+												$translated = __( 'Technology', 'cb-moto2024' );
+												break;
+											case 'Hardware':
+												$translated = __( 'Hardware', 'cb-moto2024' );
+												break;
+											case 'Device Care':
+												$translated = __( 'Device Care', 'cb-moto2024' );
+												break;
+											case 'News':
+												$translated = __( 'News', 'cb-moto2024' );
+												break;
+										}
+										?>
+                                        <?= esc_html( $translated ); ?>
                                     </div>
                                     <div class="card__title"><?= esc_html( get_the_title() ); ?>
                                     </div>

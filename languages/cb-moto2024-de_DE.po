@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cb-moto2024\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: ChatGPT\n"
+
+#: theme
+msgid "All"
+msgstr "Alle"
+
+#: theme
+msgid "View all"
+msgstr "Alle anzeigen"
+
+#: theme
+msgid "Technology"
+msgstr "Technologie"
+
+#: theme
+msgid "Hardware"
+msgstr "Hardware"
+
+#: theme
+msgid "Device Care"
+msgstr "Gerätepflege"
+
+#: theme
+msgid "News"
+msgstr "Nachrichten"

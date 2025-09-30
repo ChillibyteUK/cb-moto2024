@@ -10,6 +10,9 @@ defined( 'ABSPATH' ) || exit;
 $page_for_posts = get_option( 'page_for_posts' );
 
 get_header();
+
+var_dump( is_textdomain_loaded( 'cb-moto2024' ) );
+var_dump( get_locale() );
 ?>
 <section class="prenav">
 	<div class="container text-center py-5">

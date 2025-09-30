@@ -32,7 +32,6 @@ if ( is_single() ) {
             </div>
             <div class="col-lg-4">
                 <div class="location d-flex justify-content-around flex-column flex-lg-row align-items-center">
-                    <img alt="Current Country flag" class="flag" loading="lazy" crossorigin="anonymous" src="https://motorolauk.vtexassets.com/assets/vtex.file-manager-graphql/images/718cc89a-913a-42a1-a894-411fb33ab0fa___9820656e535ae0bb19235fef485de60a.png">
                     <a href="https://www.motorola.com/country-selector"><?= esc_html( __( 'Change location', 'cb-moto2024' ) ); ?></a>
                 </div>
             </div>

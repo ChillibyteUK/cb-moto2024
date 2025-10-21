@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cb-moto2024\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Chillibyte\n"
+
+#: theme
+msgid "All"
+msgstr "Tout"
+
+#: theme
+msgid "View all"
+msgstr "Voir tout"
+
+#: theme
+msgid "Technology"
+msgstr "Technologie"
+
+#: theme
+msgid "Hardware"
+msgstr "Matériel"
+
+#: theme
+msgid "Device Care"
+msgstr "Entretien de l’appareil"
+
+#: theme
+msgid "News"
+msgstr "Actualités"
+
+#: theme
+msgid "min read"
+msgstr "min de lecture"
+
+#: theme
+msgid "Back"
+msgstr "Retour"
+
+#: theme
+msgid "Categories"
+msgstr "Catégories"
+
+#: theme
+msgid "From our blog"
+msgstr "Depuis notre blog"
+
+#: theme
+msgid "Continue Reading"
+msgstr "Continuer la lecture"
+
+#: theme
+msgid "Official website"
+msgstr "Site officiel"
+
+#: theme
+msgid "Follow us on social media"
+msgstr "Suivez-nous sur les réseaux sociaux"
+
+#: theme
+msgid "Change location"
+msgstr "Changer d’emplacement"
+
+#: theme
+msgid "All Rights Reserved."
+msgstr "Tous droits réservés."
+
+#: theme
+msgid "MOTOROLA and the Stylized M Logo are registered trademarks of Motorola Trademark Holdings, LLC"
+msgstr "MOTOROLA et le logo M stylisé sont des marques déposées de Motorola Trademark Holdings, LLC"
+
+#: theme
+msgid "All mobile phones are designed and manufactured by Motorola Mobility LLC, a wholly owned subsidiary of Lenovo."
+msgstr "Tous les téléphones mobiles sont conçus et fabriqués par Motorola Mobility LLC, une filiale détenue à 100 % par Lenovo."
+
+#: theme
+msgid "Android, Google, Google Play, Nexus and other marks are trademarks of Google Inc. The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License."
+msgstr "Android, Google, Google Play, Nexus et d’autres marques sont des marques commerciales de Google Inc. Le robot Android est reproduit ou modifié à partir d’une œuvre créée et partagée par Google et utilisée selon les conditions décrites dans la licence Creative Commons 3.0 Attribution."

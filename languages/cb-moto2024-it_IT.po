@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cb-moto2024\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Chillibyte\n"
+
+#: theme
+msgid "All"
+msgstr "Tutto"
+
+#: theme
+msgid "View all"
+msgstr "Vedi tutto"
+
+#: theme
+msgid "Technology"
+msgstr "Technologia"
+
+#: theme
+msgid "Hardware"
+msgstr "Hardware"
+
+#: theme
+msgid "Device Care"
+msgstr "Assistenza dispositivo"
+
+#: theme
+msgid "News"
+msgstr "Notizie"
+
+#: theme
+msgid "min read"
+msgstr "min di lettura"
+
+#: theme
+msgid "Back"
+msgstr "Indietro"
+
+#: theme
+msgid "Categories"
+msgstr "Categorie"
+
+#: theme
+msgid "From our blog"
+msgstr "Dal nostro blog"
+
+#: theme
+msgid "Continue Reading"
+msgstr "Continua a leggere"
+
+#: theme
+msgid "Official website"
+msgstr "Sito ufficiale"
+
+#: theme
+msgid "Follow us on social media"
+msgstr "Seguici sui social media"
+
+#: theme
+msgid "Change location"
+msgstr "Cambia posizione"
+
+#: theme
+msgid "All Rights Reserved."
+msgstr "Tutti i diritti riservati."
+
+#: theme
+msgid "MOTOROLA and the Stylized M Logo are registered trademarks of Motorola Trademark Holdings, LLC"
+msgstr "MOTOROLA e il logo M stilizzato sono marchi registrati di Motorola Trademark Holdings, LLC"
+
+#: theme
+msgid "All mobile phones are designed and manufactured by Motorola Mobility LLC, a wholly owned subsidiary of Lenovo."
+msgstr "Tutti i telefoni cellulari sono progettati e prodotti da Motorola Mobility LLC, una filiale interamente di proprietà di Lenovo."
+
+#: theme
+msgid "Android, Google, Google Play, Nexus and other marks are trademarks of Google Inc. The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License."
+msgstr "Android, Google, Google Play, Nexus e altri marchi sono marchi di Google Inc. Il robot Android è riprodotto o modificato da un’opera creata e condivisa da Google ed è utilizzato secondo i termini descritti nella licenza Creative Commons 3.0 Attribuzione."

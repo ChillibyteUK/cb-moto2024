@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cb-moto2024\n"
-"Language: de_DE\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -9,15 +9,15 @@ msgstr ""
 
 #: theme
 msgid "All"
-msgstr "Alle"
+msgstr "Todo"
 
 #: theme
 msgid "View all"
-msgstr "Alle anzeigen"
+msgstr "Ver todo"
 
 #: theme
 msgid "Technology"
-msgstr "Technologie"
+msgstr "Tecnología"
 
 #: theme
 msgid "Hardware"
@@ -25,56 +25,56 @@ msgstr "Hardware"
 
 #: theme
 msgid "Device Care"
-msgstr "Gerätepflege"
+msgstr "Cuidado del dispositivo"
 
 #: theme
 msgid "News"
-msgstr "Nachrichten"
+msgstr "Noticias"
 
 #: theme
 msgid "min read"
-msgstr "Min. Lesezeit"
+msgstr "min de lectura"
 
 #: theme
 msgid "Back"
-msgstr "Zurück"
+msgstr "Atrás"
 
 #: theme
 msgid "Categories"
-msgstr "Kategorien"
+msgstr "Categorías"
 
 #: theme
 msgid "From our blog"
-msgstr "Aus unserem Blog"
+msgstr "De nuestro blog"
 
 #: theme
 msgid "Continue Reading"
-msgstr "Weiterlesen"
+msgstr "Seguir leyendo"
 
 #: theme
 msgid "Official website"
-msgstr "Offizielle Website"
+msgstr "Sitio web oficial"
 
 #: theme
 msgid "Follow us on social media"
-msgstr "Folge uns in den sozialen Medien"
+msgstr "Síguenos en las redes sociales"
 
 #: theme
 msgid "Change location"
-msgstr "Standort ändern"
+msgstr "Cambiar ubicación"
 
 #: theme
 msgid "All Rights Reserved."
-msgstr "Alle Rechte vorbehalten."
+msgstr "Todos los derechos reservados."
 
 #: theme
 msgid "MOTOROLA and the Stylized M Logo are registered trademarks of Motorola Trademark Holdings, LLC"
-msgstr "MOTOROLA und das stilisierte M-Logo sind eingetragene Marken von Motorola Trademark Holdings, LLC."
+msgstr "MOTOROLA y el logotipo estilizado M son marcas registradas de Motorola Trademark Holdings, LLC"
 
 #: theme
 msgid "All mobile phones are designed and manufactured by Motorola Mobility LLC, a wholly owned subsidiary of Lenovo."
-msgstr "Alle Mobiltelefone werden von Motorola Mobility LLC entworfen und hergestellt, einer hundertprozentigen Tochtergesellschaft von Lenovo."
+msgstr "Todos los teléfonos móviles están diseñados y fabricados por Motorola Mobility LLC, una filial de propiedad total de Lenovo."
 
 #: theme
 msgid "Android, Google, Google Play, Nexus and other marks are trademarks of Google Inc. The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License."
-msgstr "Android, Google, Google Play, Nexus und andere Marken sind Marken von Google Inc. Der Android-Roboter ist eine Reproduktion oder Abwandlung einer von Google erstellten und geteilten Arbeit und wird gemäß den in der Creative Commons 3.0 Attribution License beschriebenen Bedingungen verwendet."
+msgstr "Android, Google, Google Play, Nexus y otras marcas son marcas comerciales de Google Inc. El robot de Android se reproduce o modifica a partir de una obra creada y compartida por Google y se utiliza conforme a los términos descritos en la licencia Creative Commons 3.0 de Atribución."

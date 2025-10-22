@@ -75,7 +75,7 @@ if ( ! empty( $queried_object ) && isset( $queried_object->slug ) ) {
     <section class="latest pb-5 mb-5">
         <div class="container-xl">
             <div class="section_title">
-                <h2 class="fs-800"><?= esc_html( single_cat_title() ); ?> <?= esc_html( __( 'Articles', 'cb-moto2024' ) ); ?></h2>
+                <h2 class="fs-800"><?= esc_html( single_cat_title() ); ?></h2>
             </div>
             <div class="latest_grid">
                 <?php

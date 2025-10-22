@@ -8,6 +8,10 @@ msgstr ""
 "X-Generator: Chillibyte\n"
 
 #: theme
+msgid "Articles"
+msgstr "Artikel"
+
+#: theme
 msgid "All"
 msgstr "Alle"
 

@@ -29,7 +29,7 @@ if ( ! empty( $queried_object ) && isset( $queried_object->slug ) ) {
 		</div>
 		<section class="index_filters">
 			<div class="category-list">
-				<a class="category-item" href="/">All</a>
+				<a class="category-item" href="/"><?= esc_html( __( 'All', 'cb-moto2024' ) ); ?></a>
 				<?php
 				$categories = get_categories(
 					array(
@@ -40,12 +40,30 @@ if ( ! empty( $queried_object ) && isset( $queried_object->slug ) ) {
 					if ( 'uncategorized' === strtolower( $category->slug ) ) {
 						continue;
 					}
+
+										// Translate category names.
+					$translated_name = $category->name;
+					switch ( $category->name ) {
+						case 'Technology':
+							$translated_name = __( 'Technology', 'cb-moto2024' );
+							break;
+						case 'Hardware':
+							$translated_name = __( 'Hardware', 'cb-moto2024' );
+							break;
+						case 'Device Care':
+							$translated_name = __( 'Device Care', 'cb-moto2024' );
+							break;
+						case 'News':
+							$translated_name = __( 'News', 'cb-moto2024' );
+							break;
+					}
+
                     $is_active = ( isset( $category_slug ) && $category_slug === $category->slug ) ? ' active' : '';
                     printf(
                         '<a class="category-item%s" href="%s">%s</a>',
                         esc_attr( $is_active ),
                         esc_url( get_category_link( $category->term_id ) ),
-                        esc_html( $category->name )
+                        esc_html( $translated_name )
                     );
 				}
 				?>
@@ -79,12 +97,14 @@ if ( ! empty( $queried_object ) && isset( $queried_object->slug ) ) {
                                     <?php
                                     if ( 1 === $c ) {
 										global $post;
-										$old_post    = $post;
+										$old_post = $post;
+										// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 										$post        = get_post( $p );
 										$raw_content = apply_filters( 'the_content', $post->post_content );
 										$raw_content = preg_replace( '/<h1[^>]*>.*?<\/h1>/is', '', $raw_content, 1 );
-										$post        = $old_post;
-										$excerpt     = wp_trim_words( wp_strip_all_tags( $raw_content ), 50 );
+										// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+										$post    = $old_post;
+										$excerpt = wp_trim_words( wp_strip_all_tags( $raw_content ), 50 );
 										?>
 										<div class="card__excerpt"><?= esc_html( $excerpt ); ?></div>
 										<?php
